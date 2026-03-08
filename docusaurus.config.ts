@@ -66,7 +66,12 @@ const config: Config = {
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
-      }
+      },
+      items: [
+        {
+          type: 'localeDropdown',
+        },
+      ]
     },
     footer: {
       style: 'dark',
