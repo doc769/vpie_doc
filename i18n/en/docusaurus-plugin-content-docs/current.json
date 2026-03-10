@@ -3,16 +3,68 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
-    "message": "Tutorial - Basics",
-    "description": "The label for category 'Tutorial - Basics' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.📌 快速入门": {
+    "message": "📌 GETTING STARTED",
+    "description": "The label for category '📌 快速入门' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
-    "message": "5 minutes to learn the most important Docusaurus concepts.",
-    "description": "The generated-index page description for category 'Tutorial - Basics' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.🔍 探索": {
+    "message": "🔍 EXPLORE",
+    "description": "The label for category '🔍 探索' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
-    "message": "Tutorial - Extras",
-    "description": "The label for category 'Tutorial - Extras' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.🎒 核心概念": {
+    "message": "🎒 CORE CONCEPTS",
+    "description": "The label for category '🎒 核心概念' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.👨‍💻 脚本参考": {
+    "message": "👨‍💻 SCRIPTING REFERENCE",
+    "description": "The label for category '👨‍💻 脚本参考' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.教程与示例": {
+    "message": "Tutorials & Examples",
+    "description": "The label for category '教程与示例' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.沙盒游戏模式": {
+    "message": "Sandbox Game-Mode",
+    "description": "The label for category '沙盒游戏模式' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.游戏模式与包": {
+    "message": "Game-Modes & Packages",
+    "description": "The label for category '游戏模式与包' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.服务器手册": {
+    "message": "Server Manual",
+    "description": "The label for category '服务器手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.包管理": {
+    "message": "Packages",
+    "description": "The label for category '包管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.脚本编写": {
+    "message": "Scripting",
+    "description": "The label for category '脚本编写' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.类": {
+    "message": "Classes",
+    "description": "The label for category '类' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.静态类": {
+    "message": "Static Classes",
+    "description": "The label for category '静态类' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.结构体": {
+    "message": "Structs",
+    "description": "The label for category '结构体' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.工具类": {
+    "message": "Utility Classes",
+    "description": "The label for category '工具类' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.标准库": {
+    "message": "Standard Libraries",
+    "description": "The label for category '标准库' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.术语表": {
+    "message": "Glossary",
+    "description": "The label for category '术语表' in sidebar 'tutorialSidebar'"
   }
 }
