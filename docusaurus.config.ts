@@ -62,48 +62,57 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'nanos world',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'nanos world',
+        src: 'img/nanos-world.png',
+        href: 'https://nanos-world.com/'
       },
       items: [
         {
+          type: 'doc',
+          docId: 'welcome',
+          position: 'left',
+          label: 'docs',
+        },
+        {
           type: 'localeDropdown',
-        },
-      ]
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
+          position: 'right',
+          dropdownItemsAfter: [
             {
-              label: 'Tutorial',
-              to: '/intro',
+              href: 'https://crowdin.com/project/nanos-world-docs/',
+              label: 'Help Us Translate',
             },
+            {
+              type: 'html',
+              className: 'crowdin-progress-item',
+              value: '<a title="Help Us Translate" target="_blank" href="https://crowdin.com/project/nanos-world-docs/"><img src="https://badges.crowdin.net/nanos-world-docs/localized.svg"></a>'
+            }
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
+          type: 'search',
+          position: 'right',
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    footer: {
+      copyright: `© ${new Date().getFullYear()} Go Horse Studios.`,
+      style: 'light',
+      links: [
+        {
+          label: 'Terms of Service',
+          href: 'https://gohorsestudios.com/tos',
+        },
+        {
+          label: 'Privacy',
+          href: 'https://gohorsestudios.com/privacy',
+        },
+        {
+          label: 'Imprint',
+          href: 'https://gohorsestudios.com/imprint',
+        }
+      ]
     },
     prism: {
       theme: prismThemes.github,
