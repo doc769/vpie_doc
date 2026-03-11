@@ -1,0 +1,312 @@
+---
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# GITALLER 升级固件教程
+
+## 下载固件
+
+[点击下载固件](https://www.dj-dao.com/firmware/Guitar_firmware_20200926.zip)
+
+:::tip
+请完全解压后使用，不要在压缩包内直接运行。
+:::
+
+## 固件升级教程
+
+<Steps>
+<Step title="解压缩固件压缩包">
+
+将下载的固件压缩包解压到本地文件夹。
+
+</Step>
+<Step title="确保 USB 未连接">
+
+确保 GITALLER 的 USB 接口没有连接 PC。
+
+</Step>
+<Step title="进入固件升级模式">
+
+同时按下 START + SELECT 按键不松手，将 GITALLER 的 USB 接口插入 PC。USB 插入 PC 后，START + SELECT 可以松开手。
+
+![按下 START + SELECT](/img/docs/gitaller-firmware/step3-buttons.png)
+
+![插入 USB](/img/docs/gitaller-firmware/step3-usb.png)
+
+</Step>
+<Step title="打开固件升级程序">
+
+打开 `GITALLER_firmware_APP.exe` 程序。
+
+![打开程序](/img/docs/gitaller-firmware/step4-app.png)
+
+</Step>
+<Step title="加载固件文件">
+
+点击 **LoadFile** 按钮，找到下载固件的文件夹，选择 `GITALLER_firmware_V1.0_20200926.bin` 文件。
+
+![点击 LoadFile](/img/docs/gitaller-firmware/step5-loadfile.png)
+
+![选择固件文件](/img/docs/gitaller-firmware/step6-select-bin.png)
+
+</Step>
+<Step title="开始升级">
+
+点击 **Start** 按钮，开始升级固件。等待进度条完成。
+
+![点击 Start](/img/docs/gitaller-firmware/step7-start.png)
+
+![等待进度条](/img/docs/gitaller-firmware/step8-progress.png)
+
+</Step>
+<Step title="升级完成">
+
+显示成功后，**重新插拔 GITALLER USB 接口**（重要）。
+
+![升级成功](/img/docs/gitaller-firmware/step9-success.png)
+
+:::warning
+如果没有成功，从步骤 3 开始重新再操作一遍。
+:::
+
+</Step>
+</Steps>
+
+## 固件升级后，功能简介
+
+### WAILING 按键模式
+
+该模式为默认，无需切换。
+
+同时按下 B1+B2+B3+B4+B5+SELECT，持续 2 秒，屏蔽陀螺仪 XYZ 轴输出，wailing_up 和 wailing_down 作为按键输出。
+
+![WAILING 按键模式](/img/docs/gitaller-firmware/wailing-button-mode.png)
+
+### WAILING XYZ 模式
+
+该模式适合高级玩家使用，初级玩家请不要切换。
+
+同时按下 B1+B2+B3+B4+B5+START，持续 2 秒，屏蔽 wailing_up 和 wailing_down 的按键输出，陀螺仪 XYZ 轴正常输出。
+
+![WAILING XYZ 模式](/img/docs/gitaller-firmware/wailing-xyz-mode.png)
+
+## 解决的问题
+
+1. 在 GITADORA trial 1.0 上，START 按键是 START 功能，SELECT 按键是 HELP 功能
+2. 在 DTXmania 设置时，请使用 WAILING BUTTON 模式，wailing_up 和 wailing_down 这 2 个按键都要做映射
+3. 在 S tools 和 B tools 使用时，如果映射 XYZ 轴，请切换到 WAILING XYZ 模式；如果映射 wailing_up 和 wailing_down 这 2 个按键，请切换到 WAILING BUTTON 模式
+
+### 在 GITADORA trial 上的设置图
+
+在 GITADORA trial 中，第 1 个按键显示为 0，wailing_up 显示为 10，wailing_down 显示为 11。
+
+![GITADORA trial 设置](/img/docs/gitaller-firmware/gitadora-trial-config.png)
+
+### 在 DTXmania 上的设置图
+
+在 DTXmania 中，第 1 个按键显示为 1，wailing_up 显示为 11，wailing_down 显示为 12。
+
+![DTXmania 设置](/img/docs/gitaller-firmware/dtxmania-config.png)
+
+## 包管理器安装示例
+
+<Tabs>
+<TabItem value="npm" label="npm" default>
+
+```bash
+npm install gitaller-tools
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn">
+
+```bash
+yarn add gitaller-tools
+```
+
+</TabItem>
+<TabItem value="pnpm" label="pnpm">
+
+```bash
+pnpm add gitaller-tools
+```
+
+</TabItem>
+<TabItem value="deno" label="deno">
+
+```bash
+deno add npm:gitaller-tools
+```
+
+</TabItem>
+</Tabs>
+
+:::tip
+如果无法解决问题，请邮件联系我们。我们会协助你完成升级。
+:::
+
+## 样式组件展示
+
+以下展示本站可用的 CSS 样式组件，供文档编写参考。
+
+### 引用链接卡片 (ReferenceLink)
+
+带箭头图标和路径提示的链接卡片，适合在页面底部引用相关文档。
+
+<ReferenceLink href="getting-started/gitaller-firmware-guide">GITALLER 升级固件教程</ReferenceLink>
+<ReferenceLink href="getting-started/quick-start">快速开始</ReferenceLink>
+
+### 图片卡片链接 (Card Link)
+
+带封面图的卡片，适合展示游戏模式或功能模块。
+
+<div className="card-links">
+<a className="card-link" href="/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/wailing-button-mode.png" alt="WAILING 按键模式" />
+  <h4>WAILING 按键模式</h4>
+  <p>默认模式，wailing_up 和 wailing_down 作为按键输出。</p>
+</a>
+<a className="card-link" href="/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/wailing-xyz-mode.png" alt="WAILING XYZ 模式" />
+  <h4>WAILING XYZ 模式</h4>
+  <p>高级模式，陀螺仪 XYZ 轴正常输出。</p>
+</a>
+</div>
+
+### 精简卡片链接 (Card Link Lean)
+
+更紧凑的卡片变体，适合列表展示。
+
+<div className="card-links">
+<a className="card-link card-link-lean" href="/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/step4-app.png" alt="固件程序" />
+  <p>固件升级程序</p>
+</a>
+<a className="card-link card-link-lean" href="/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/step7-start.png" alt="开始升级" />
+  <p>开始升级流程</p>
+</a>
+<a className="card-link card-link-lean" href="/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/step9-success.png" alt="升级成功" />
+  <p>升级成功确认</p>
+</a>
+</div>
+
+### 媒体画廊 (Media Gallery)
+
+两列并排图片展示，适合对比或展示多个截图。
+
+<div className="media-gallery">
+
+![GITADORA 设置](/img/docs/gitaller-firmware/gitadora-trial-config.png)
+
+![DTXmania 设置](/img/docs/gitaller-firmware/dtxmania-config.png)
+
+</div>
+<p className="media-legend">左：GITADORA trial 设置图 / 右：DTXmania 设置图</p>
+
+### 悬浮链接 (Hover Link)
+
+带虚线下划线的悬浮提示链接，适合术语解释。
+
+这是一段包含 <span className="hover-link" title="GITALLER 是 DJ DAO 出品的吉他控制器">GITALLER</span> 术语的文本，鼠标悬停可看到提示信息。也可以作为链接使用：<a className="hover-link" href="/getting-started/gitaller-firmware-guide">固件升级指南</a>。
+
+### 柔和描述 (Subtle Description)
+
+<p className="subtle-description">这是一段柔和描述文本，适合在标题或内容下方添加次要说明信息，字体较小且带有透明度。</p>
+
+### 提示框 (Admonitions)
+
+:::note 备注
+这是一个 **note** 提示框，用于一般性说明。
+:::
+
+:::tip 提示
+这是一个 **tip** 提示框，用于有用的建议。
+:::
+
+:::info 信息
+这是一个 **info** 提示框，用于补充信息。
+:::
+
+:::warning 警告
+这是一个 **warning** 提示框，用于注意事项。
+:::
+
+:::danger 危险
+这是一个 **danger** 提示框，用于严重警告。
+:::
+
+### 代码块样式
+
+#### Shell 命令（自动添加 `$` 前缀）
+
+```shell
+cd firmware-folder
+./GITALLER_firmware_APP.exe
+```
+
+#### 标准代码高亮
+
+```lua title="server.lua"
+-- 这是一个 Lua 脚本示例
+local player = Player()
+player:SetName("TestPlayer")
+print("Hello from nanos world!")
+```
+
+```javascript title="example.js"
+// JavaScript 示例
+const config = {
+  name: "GITALLER",
+  version: "1.0",
+  buttons: ["B1", "B2", "B3", "B4", "B5"],
+};
+console.log(config.name);
+```
+
+### 可折叠区域 (Details)
+
+<details>
+<summary>点击展开详细信息</summary>
+
+这里可以放置较长的内容，默认情况下处于折叠状态。
+
+- 支持 Markdown 格式
+- 支持**粗体**和 `代码`
+- 支持列表
+
+</details>
+
+### 引用块 (Blockquote)
+
+> 这是一段引用文本，适用于强调或引述。Docusaurus 自定义了引用块的背景色和边框样式。
+
+### 表格样式
+
+| 按键 | GITADORA trial | DTXmania |
+|:---:|:---:|:---:|
+| 第 1 个按键 | 0 | 1 |
+| wailing_up | 10 | 11 |
+| wailing_down | 11 | 12 |
+
+### 脚本图标 (Scripting Icons)
+
+API 文档中使用的可用性和类型图标：
+
+<div style={{display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap'}}>
+  <span className="authority-availability"><img src="/img/scripting/server-only.svg" alt="Server Only" /></span> 仅服务端
+  <span className="authority-availability"><img src="/img/scripting/client-only.svg" alt="Client Only" /></span> 仅客户端
+  <span className="authority-availability"><img src="/img/scripting/both.svg" alt="Both" /></span> 双端可用
+  <span className="authority-availability"><img src="/img/scripting/authority-only.svg" alt="Authority" /></span> 仅授权端
+</div>
+
+<br />
+
+<div style={{display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap'}}>
+  <span className="native-type"><img src="/img/scripting/native.svg" alt="Native" /></span> 原生类型
+  <span className="native-type"><img src="/img/scripting/not-native.svg" alt="Not Native" /></span> 非原生类型
+</div>

@@ -1,0 +1,312 @@
+---
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# GITALLER Firmware Update Guide
+
+## Download Firmware
+
+[Download The Firmware](https://www.dj-dao.com/firmware/Guitar_firmware_20200926.zip)
+
+:::tip
+Please fully extract before use. Do not run directly from the compressed package.
+:::
+
+## Firmware Update Guide
+
+<Steps>
+<Step title="Extract the firmware package">
+
+Extract the downloaded firmware compressed package to a local folder.
+
+</Step>
+<Step title="Make sure USB is disconnected">
+
+Confirm your GITALLER USB cable is unplugged from PC.
+
+</Step>
+<Step title="Enter firmware update mode">
+
+Push START + SELECT button at same time, do not loosen your hand. Plug GITALLER USB cable to PC with your other hand. Then loosen the START + SELECT button.
+
+![Push START + SELECT](/img/docs/gitaller-firmware/step3-buttons.png)
+
+![Plug USB](/img/docs/gitaller-firmware/step3-usb.png)
+
+</Step>
+<Step title="Open the firmware update program">
+
+Open `GITALLER_firmware_APP.exe`.
+
+![Open app](/img/docs/gitaller-firmware/step4-app.png)
+
+</Step>
+<Step title="Load firmware file">
+
+Click **LoadFile** button. Find your download folder, select `GITALLER_firmware_V1.0_20200926.bin`.
+
+![Click LoadFile](/img/docs/gitaller-firmware/step5-loadfile.png)
+
+![Select firmware file](/img/docs/gitaller-firmware/step6-select-bin.png)
+
+</Step>
+<Step title="Start update">
+
+Click **Start** button to begin updating. Wait for the progress bar to complete.
+
+![Click Start](/img/docs/gitaller-firmware/step7-start.png)
+
+![Waiting progress bar](/img/docs/gitaller-firmware/step8-progress.png)
+
+</Step>
+<Step title="Update complete">
+
+After success, **replug your GITALLER USB cable** (Very important).
+
+![Update success](/img/docs/gitaller-firmware/step9-success.png)
+
+:::warning
+If not successful, please retry again from Step 3.
+:::
+
+</Step>
+</Steps>
+
+## After Updating, What's New?
+
+### WAILING BUTTON Mode
+
+The mode is default when you update the firmware, no need to switch.
+
+Push B1+B2+B3+B4+B5+SELECT at same time for 2 seconds, the gyroscope XYZ stops outputting, wailing_up and wailing_down output as two single button signals.
+
+![WAILING BUTTON mode](/img/docs/gitaller-firmware/wailing-button-mode.png)
+
+### WAILING XYZ Mode
+
+The mode is for advanced players. Beginner players please don't use it.
+
+Push B1+B2+B3+B4+B5+START at same time for 2 seconds, wailing_up and wailing_down buttons stop to output, the gyroscope XYZ outputs normally.
+
+![WAILING XYZ mode](/img/docs/gitaller-firmware/wailing-xyz-mode.png)
+
+## What Problem Does It Solve?
+
+1. At GITADORA trial 1.0, START button is start function, SELECT button is the help function
+2. When you setup DTXmania, please use WAILING BUTTON mode, wailing_up and wailing_down need to be mapped on DTXmania wailing config
+3. When you use S tools or B tools, if map XYZ axis, please switch WAILING XYZ mode; if map wailing_up and wailing_down buttons, please switch WAILING BUTTON mode
+
+### Key Config at GITADORA trial
+
+At GITADORA trial, first button is showed as 0, wailing_up is showed as 10, wailing_down is showed as 11.
+
+![GITADORA trial config](/img/docs/gitaller-firmware/gitadora-trial-config.png)
+
+### Wailing Config at DTXmania
+
+At DTXmania, first button is showed as 1, wailing_up is showed as 11, wailing_down is showed as 12.
+
+![DTXmania config](/img/docs/gitaller-firmware/dtxmania-config.png)
+
+## Package Manager Install Example
+
+<Tabs>
+<TabItem value="npm" label="npm" default>
+
+```bash
+npm install gitaller-tools
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn">
+
+```bash
+yarn add gitaller-tools
+```
+
+</TabItem>
+<TabItem value="pnpm" label="pnpm">
+
+```bash
+pnpm add gitaller-tools
+```
+
+</TabItem>
+<TabItem value="deno" label="deno">
+
+```bash
+deno add npm:gitaller-tools
+```
+
+</TabItem>
+</Tabs>
+
+:::tip
+If you can't resolve the issue, please feel free to contact us by email. We will provide more help for you.
+:::
+
+## Style Components Showcase
+
+Below are the available CSS style components for documentation reference.
+
+### Reference Link Cards
+
+Link cards with arrow icon and path hint, ideal for referencing related docs at the bottom of a page.
+
+<ReferenceLink href="getting-started/gitaller-firmware-guide">GITALLER Firmware Update Guide</ReferenceLink>
+<ReferenceLink href="getting-started/quick-start">Quick Start</ReferenceLink>
+
+### Image Card Links (Card Link)
+
+Cards with cover images, suitable for showcasing game modes or feature modules.
+
+<div className="card-links">
+<a className="card-link" href="/en/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/wailing-button-mode.png" alt="WAILING BUTTON Mode" />
+  <h4>WAILING BUTTON Mode</h4>
+  <p>Default mode, wailing_up and wailing_down output as button signals.</p>
+</a>
+<a className="card-link" href="/en/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/wailing-xyz-mode.png" alt="WAILING XYZ Mode" />
+  <h4>WAILING XYZ Mode</h4>
+  <p>Advanced mode, gyroscope XYZ outputs normally.</p>
+</a>
+</div>
+
+### Compact Card Links (Card Link Lean)
+
+A more compact card variant, suitable for list displays.
+
+<div className="card-links">
+<a className="card-link card-link-lean" href="/en/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/step4-app.png" alt="Firmware App" />
+  <p>Firmware Update Program</p>
+</a>
+<a className="card-link card-link-lean" href="/en/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/step7-start.png" alt="Start Update" />
+  <p>Start Update Process</p>
+</a>
+<a className="card-link card-link-lean" href="/en/getting-started/gitaller-firmware-guide">
+  <img src="/img/docs/gitaller-firmware/step9-success.png" alt="Update Success" />
+  <p>Update Success Confirmation</p>
+</a>
+</div>
+
+### Media Gallery
+
+Two-column side-by-side image display, ideal for comparisons or showcasing multiple screenshots.
+
+<div className="media-gallery">
+
+![GITADORA Config](/img/docs/gitaller-firmware/gitadora-trial-config.png)
+
+![DTXmania Config](/img/docs/gitaller-firmware/dtxmania-config.png)
+
+</div>
+<p className="media-legend">Left: GITADORA trial config / Right: DTXmania config</p>
+
+### Hover Link
+
+Dashed underline links with hover tooltip, suitable for term explanations.
+
+This text contains a <span className="hover-link" title="GITALLER is a guitar controller made by DJ DAO">GITALLER</span> term — hover to see the tooltip. Also works as a link: <a className="hover-link" href="/en/getting-started/gitaller-firmware-guide">Firmware Update Guide</a>.
+
+### Subtle Description
+
+<p className="subtle-description">This is a subtle description text, suitable for secondary notes below titles or content. Smaller font with reduced opacity.</p>
+
+### Admonitions
+
+:::note Note
+This is a **note** admonition for general information.
+:::
+
+:::tip Tip
+This is a **tip** admonition for useful suggestions.
+:::
+
+:::info Info
+This is an **info** admonition for supplementary information.
+:::
+
+:::warning Warning
+This is a **warning** admonition for cautions.
+:::
+
+:::danger Danger
+This is a **danger** admonition for critical warnings.
+:::
+
+### Code Block Styles
+
+#### Shell Commands (auto `$` prefix)
+
+```shell
+cd firmware-folder
+./GITALLER_firmware_APP.exe
+```
+
+#### Standard Code Highlighting
+
+```lua title="server.lua"
+-- This is a Lua script example
+local player = Player()
+player:SetName("TestPlayer")
+print("Hello from nanos world!")
+```
+
+```javascript title="example.js"
+// JavaScript example
+const config = {
+  name: "GITALLER",
+  version: "1.0",
+  buttons: ["B1", "B2", "B3", "B4", "B5"],
+};
+console.log(config.name);
+```
+
+### Collapsible Section (Details)
+
+<details>
+<summary>Click to expand details</summary>
+
+This is where you can place longer content, collapsed by default.
+
+- Supports Markdown formatting
+- Supports **bold** and `code`
+- Supports lists
+
+</details>
+
+### Blockquote
+
+> This is a blockquote, suitable for emphasis or citations. Docusaurus customizes the background and border styles of blockquotes.
+
+### Table Styles
+
+| Button | GITADORA trial | DTXmania |
+|:---:|:---:|:---:|
+| First button | 0 | 1 |
+| wailing_up | 10 | 11 |
+| wailing_down | 11 | 12 |
+
+### Scripting Icons
+
+Availability and type icons used in API documentation:
+
+<div style={{display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap'}}>
+  <span className="authority-availability"><img src="/img/scripting/server-only.svg" alt="Server Only" /></span> Server Only
+  <span className="authority-availability"><img src="/img/scripting/client-only.svg" alt="Client Only" /></span> Client Only
+  <span className="authority-availability"><img src="/img/scripting/both.svg" alt="Both" /></span> Both Sides
+  <span className="authority-availability"><img src="/img/scripting/authority-only.svg" alt="Authority" /></span> Authority Only
+</div>
+
+<br />
+
+<div style={{display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap'}}>
+  <span className="native-type"><img src="/img/scripting/native.svg" alt="Native" /></span> Native Type
+  <span className="native-type"><img src="/img/scripting/not-native.svg" alt="Not Native" /></span> Non-Native Type
+</div>
