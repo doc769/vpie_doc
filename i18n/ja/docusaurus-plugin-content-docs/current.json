@@ -15,10 +15,6 @@
     "message": "🎒 コアコンセプト",
     "description": "The label for category '🎒 核心概念' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.👨‍💻 脚本参考": {
-    "message": "👨‍💻 スクリプトリファレンス",
-    "description": "The label for category '👨‍💻 脚本参考' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.教程与示例": {
     "message": "チュートリアルと例",
     "description": "The label for category '教程与示例' in sidebar 'tutorialSidebar'"
@@ -43,28 +39,52 @@
     "message": "スクリプティング",
     "description": "The label for category '脚本编写' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.类": {
-    "message": "クラス",
-    "description": "The label for category '类' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.教程与示例.link.generated-index.title": {
+    "message": "チュートリアルと例",
+    "description": "The generated-index page title for category '教程与示例' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.静态类": {
-    "message": "静的クラス",
-    "description": "The label for category '静态类' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.教程与示例.link.generated-index.description": {
+    "message": "すべてのチュートリアルとサンプルドキュメントを参照できます。",
+    "description": "The generated-index page description for category '教程与示例' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.结构体": {
-    "message": "構造体",
-    "description": "The label for category '结构体' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.沙盒游戏模式.link.generated-index.title": {
+    "message": "サンドボックスゲームモード",
+    "description": "The generated-index page title for category '沙盒游戏模式' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.工具类": {
-    "message": "ユーティリティクラス",
-    "description": "The label for category '工具类' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.沙盒游戏模式.link.generated-index.description": {
+    "message": "サンドボックスゲームモードに関するドキュメントを探索できます。",
+    "description": "The generated-index page description for category '沙盒游戏模式' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.标准库": {
-    "message": "標準ライブラリ",
-    "description": "The label for category '标准库' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.游戏模式与包.link.generated-index.title": {
+    "message": "ゲームモードとパッケージ",
+    "description": "The generated-index page title for category '游戏模式与包' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.术语表": {
-    "message": "用語集",
-    "description": "The label for category '术语表' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.游戏模式与包.link.generated-index.description": {
+    "message": "さまざまなゲームモードとパッケージについて学べます。",
+    "description": "The generated-index page description for category '游戏模式与包' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.服务器手册.link.generated-index.title": {
+    "message": "サーバーマニュアル",
+    "description": "The generated-index page title for category '服务器手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.服务器手册.link.generated-index.description": {
+    "message": "サーバー設定と管理の完全ガイド。",
+    "description": "The generated-index page description for category '服务器手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.包管理.link.generated-index.title": {
+    "message": "パッケージ",
+    "description": "The generated-index page title for category '包管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.包管理.link.generated-index.description": {
+    "message": "パッケージの作成と管理方法を学べます。",
+    "description": "The generated-index page description for category '包管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.脚本编写.link.generated-index.title": {
+    "message": "スクリプティング",
+    "description": "The generated-index page title for category '脚本编写' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.脚本编写.link.generated-index.description": {
+    "message": "スクリプティングの基礎知識と上級ガイド。",
+    "description": "The generated-index page description for category '脚本编写' in sidebar 'tutorialSidebar'"
   }
 }

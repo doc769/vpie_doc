@@ -1,4 +1,9 @@
 {
   "position": 2,
-  "label": "包管理"
+  "label": "包管理",
+  "link": {
+    "type": "generated-index",
+    "title": "包管理",
+    "description": "了解如何创建和管理包。"
+  }
 }

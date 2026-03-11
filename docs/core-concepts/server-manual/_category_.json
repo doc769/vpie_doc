@@ -1,4 +1,9 @@
 {
   "position": 1,
-  "label": "服务器手册"
+  "label": "服务器手册",
+  "link": {
+    "type": "generated-index",
+    "title": "服务器手册",
+    "description": "服务器配置与管理的完整指南。"
+  }
 }

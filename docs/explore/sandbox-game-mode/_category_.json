@@ -1,4 +1,9 @@
 {
   "position": 1,
-  "label": "沙盒游戏模式"
+  "label": "沙盒游戏模式",
+  "link": {
+    "type": "generated-index",
+    "title": "沙盒游戏模式",
+    "description": "探索沙盒游戏模式的相关文档。"
+  }
 }

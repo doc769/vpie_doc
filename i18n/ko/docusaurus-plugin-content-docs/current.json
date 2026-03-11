@@ -15,10 +15,6 @@
     "message": "🎒 핵심 개념",
     "description": "The label for category '🎒 核心概念' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.👨‍💻 脚本参考": {
-    "message": "👨‍💻 스크립팅 참조",
-    "description": "The label for category '👨‍💻 脚本参考' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.教程与示例": {
     "message": "튜토리얼 및 예제",
     "description": "The label for category '教程与示例' in sidebar 'tutorialSidebar'"
@@ -43,28 +39,52 @@
     "message": "스크립팅",
     "description": "The label for category '脚本编写' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.类": {
-    "message": "클래스",
-    "description": "The label for category '类' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.教程与示例.link.generated-index.title": {
+    "message": "튜토리얼 및 예제",
+    "description": "The generated-index page title for category '教程与示例' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.静态类": {
-    "message": "정적 클래스",
-    "description": "The label for category '静态类' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.教程与示例.link.generated-index.description": {
+    "message": "모든 튜토리얼 및 예제 문서를 확인하세요.",
+    "description": "The generated-index page description for category '教程与示例' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.结构体": {
-    "message": "구조체",
-    "description": "The label for category '结构体' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.沙盒游戏模式.link.generated-index.title": {
+    "message": "샌드박스 게임 모드",
+    "description": "The generated-index page title for category '沙盒游戏模式' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.工具类": {
-    "message": "유틸리티 클래스",
-    "description": "The label for category '工具类' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.沙盒游戏模式.link.generated-index.description": {
+    "message": "샌드박스 게임 모드 관련 문서를 살펴보세요.",
+    "description": "The generated-index page description for category '沙盒游戏模式' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.标准库": {
-    "message": "표준 라이브러리",
-    "description": "The label for category '标准库' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.游戏模式与包.link.generated-index.title": {
+    "message": "게임 모드 및 패키지",
+    "description": "The generated-index page title for category '游戏模式与包' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.术语表": {
-    "message": "용어집",
-    "description": "The label for category '术语表' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.游戏模式与包.link.generated-index.description": {
+    "message": "다양한 게임 모드와 패키지에 대해 알아보세요.",
+    "description": "The generated-index page description for category '游戏模式与包' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.服务器手册.link.generated-index.title": {
+    "message": "서버 매뉴얼",
+    "description": "The generated-index page title for category '服务器手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.服务器手册.link.generated-index.description": {
+    "message": "서버 구성 및 관리에 대한 완전한 가이드.",
+    "description": "The generated-index page description for category '服务器手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.包管理.link.generated-index.title": {
+    "message": "패키지",
+    "description": "The generated-index page title for category '包管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.包管理.link.generated-index.description": {
+    "message": "패키지를 만들고 관리하는 방법을 알아보세요.",
+    "description": "The generated-index page description for category '包管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.脚本编写.link.generated-index.title": {
+    "message": "스크립팅",
+    "description": "The generated-index page title for category '脚本编写' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.脚本编写.link.generated-index.description": {
+    "message": "스크립팅 기초 지식과 고급 가이드.",
+    "description": "The generated-index page description for category '脚本编写' in sidebar 'tutorialSidebar'"
   }
 }
