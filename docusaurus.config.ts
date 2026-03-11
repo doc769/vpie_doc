@@ -55,9 +55,20 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    'docusaurus-plugin-image-zoom',
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    announcementBar: {
+      id: 'announcement-2026-03',
+      content: '🎉 欢迎访问 nanos world 文档站！本站正在持续建设中。',
+      backgroundColor: '#5fa0ff',
+      textColor: '#ffffff',
+      isCloseable: true,
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -117,6 +128,10 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      config: {},
     },
   } satisfies Preset.ThemeConfig,
 };
