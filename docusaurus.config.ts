@@ -59,6 +59,15 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
   ],
 
+  themes: [
+    ['@easyops-cn/docusaurus-search-local', {
+      hashed: true,
+      language: ['zh', 'en', 'ja'],
+      indexBlog: false,
+      docsRouteBasePath: '/',
+    }],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
