@@ -325,5 +325,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "theme.AnnouncementBar.content": {
+    "message": "🎉 Welcome to the nanos world docs! This site is under active development.",
+    "description": "The content of the announcement bar"
   }
 }

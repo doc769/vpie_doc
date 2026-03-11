@@ -325,5 +325,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "태그",
     "description": "The title of the tag list page"
+  },
+  "theme.AnnouncementBar.content": {
+    "message": "🎉 nanos world 문서 사이트에 오신 것을 환영합니다! 이 사이트는 현재 개발 중입니다.",
+    "description": "The content of the announcement bar"
   }
 }
