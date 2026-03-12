@@ -11,6 +11,10 @@
 /* Website font */
 @import url('poppins.css');
 
+/* CJK fonts */
+@import url('noto-sans-sc.css');
+@import url('noto-sans-kr.css');
+
 /* You can override the default Infima variables here. */
 :root {
 	--ifm-leading-desktop: 1.75;
@@ -49,6 +53,36 @@
 
 	/* Highlight line */
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+	/* Sidebar */
+	--sidebar-active-bg: var(--ifm-color-primary);
+	--sidebar-active-text: #ffffff;
+	--sidebar-active-radius: 0.375rem;
+	--sidebar-line-color: var(--ifm-color-emphasis-200);
+}
+
+:lang(en) {
+	--ifm-font-family-base: Poppins, -apple-system, BlinkMacSystemFont,
+		Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+	--ifm-font-size-base: 95%;
+}
+
+:lang(zh) {
+	--ifm-font-family-base: "Noto Sans SC", "PingFang SC",
+		"Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+	--ifm-font-size-base: 95%;
+}
+
+:lang(ja) {
+	--ifm-font-family-base: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN",
+		"Yu Gothic", Meiryo, sans-serif;
+	--ifm-font-size-base: 93%;
+}
+
+:lang(ko) {
+	--ifm-font-family-base: "Noto Sans KR", "Apple SD Gothic Neo",
+		"Malgun Gothic", sans-serif;
+	--ifm-font-size-base: 95%;
 }
 
 html.blog-wrapper {
@@ -84,6 +118,9 @@ html[data-theme="dark"] {
 
 	/* Highlight line */
 	--docusaurus-highlighted-code-line-bg: rgba(66, 66, 66, .35);
+
+	/* Sidebar */
+	--sidebar-line-color: var(--ifm-color-emphasis-300);
 
 	/* Footer */
 	--ifm-footer-background-color: var(--ifm-navbar-background-color);
@@ -290,23 +327,82 @@ blockquote {
 }
 
 
-/* First items / Categories Sidebar */
+/* ===== Tauri-style Sidebar ===== */
+
+/* 顶级分类：大号加粗 */
 .theme-doc-sidebar-item-category-level-1 >
-.menu__list-item-collapsible:first-child {
-	color: #888;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: .85rem;
-	pointer-events: none;
+.menu__list-item-collapsible .menu__link {
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--ifm-color-emphasis-900);
 }
 
+/* 激活链接：蓝色色块 */
+.menu__link--active:not(.menu__link--sublist) {
+	background-color: var(--sidebar-active-bg) !important;
+	color: var(--sidebar-active-text) !important;
+	border-radius: var(--sidebar-active-radius);
+	font-weight: 600;
+}
+
+/* 展开子项的竖线 */
+.theme-doc-sidebar-item-category-level-1 > .menu__list {
+	margin-left: 0.75rem;
+	padding-left: 0.75rem;
+	border-left: 2px solid var(--sidebar-line-color);
+}
+
+.theme-doc-sidebar-item-category-level-2 > .menu__list {
+	margin-left: 0.5rem;
+	padding-left: 0.5rem;
+	border-left: 2px solid var(--sidebar-line-color);
+}
+
+/* 二级分类加粗 */
+.theme-doc-sidebar-item-category-level-2 >
+.menu__list-item-collapsible .menu__link {
+	font-weight: 600;
+}
+
+/* 链接过渡 + 圆角 */
 .menu__link {
 	user-select: none;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.menu__link:hover:not(.menu__link--active) {
+	border-radius: var(--sidebar-active-radius);
 }
 
 .theme-doc-sidebar-item-category-level-1 {
 	margin-top: 2rem !important;
 }
+
+/* ===== Sidebar Icons ===== */
+
+/* 侧边栏图标公共样式 */
+[class*="sidebar-icon-"] > .menu__link::before,
+.sidebar-icon-start > .menu__list-item-collapsible .menu__link::before,
+.sidebar-icon-explore > .menu__list-item-collapsible .menu__link::before,
+.sidebar-icon-concepts > .menu__list-item-collapsible .menu__link::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	filter: var(--ifm-menu-link-sublist-icon-filter);
+}
+
+/* 各图标 */
+.sidebar-icon-welcome > .menu__link::before { background-image: url('/img/sidebar/welcome.svg'); }
+.sidebar-icon-contributing > .menu__link::before { background-image: url('/img/sidebar/contributing.svg'); }
+.sidebar-icon-start > .menu__list-item-collapsible .menu__link::before { background-image: url('/img/sidebar/start.svg'); }
+.sidebar-icon-explore > .menu__list-item-collapsible .menu__link::before { background-image: url('/img/sidebar/explore.svg'); }
+.sidebar-icon-concepts > .menu__list-item-collapsible .menu__link::before { background-image: url('/img/sidebar/concepts.svg'); }
 
 
 /* Zoom Image */
@@ -397,6 +493,30 @@ html[data-theme='dark'] .header-status-link:before {
 
 html[data-theme='dark'] .header-account-link:before {
 	background: no-repeat center/26px url("/img/social/account-white.svg");
+}
+
+.header-twitter-link:before {
+	background: no-repeat center/22px url("/img/social/x-color.svg");
+}
+
+html[data-theme='dark'] .header-twitter-link:before {
+	background: no-repeat center/22px url("/img/social/x-white.svg");
+}
+
+.header-djdao-link:before {
+	background: no-repeat center/22px url("/img/social/djdao-color.png");
+}
+
+html[data-theme='dark'] .header-djdao-link:before {
+	background: no-repeat center/22px url("/img/social/djdao-color.png");
+}
+
+.header-gamo2-link:before {
+	background: no-repeat center/22px url("/img/social/gamo2-color.png");
+}
+
+html[data-theme='dark'] .header-gamo2-link:before {
+	background: no-repeat center/22px url("/img/social/gamo2-color.png");
 }
 
 /* Scripting Components */

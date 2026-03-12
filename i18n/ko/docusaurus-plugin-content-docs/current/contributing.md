@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
-sidebar_label: "🤝 문서 기여"
+sidebar_label: "문서 기여"
+sidebar_class_name: sidebar-icon-contributing
 ---
 
 # 문서 기여

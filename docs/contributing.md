@@ -1,6 +1,7 @@
 ---
-sidebar_position: 4
-sidebar_label: "🤝 参与文档贡献"
+sidebar_position: 2
+sidebar_label: "参与文档贡献"
+sidebar_class_name: sidebar-icon-contributing
 ---
 
 # 参与文档贡献

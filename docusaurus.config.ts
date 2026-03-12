@@ -57,6 +57,24 @@ const config: Config = {
 
   plugins: [
     'docusaurus-plugin-image-zoom',
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'djdao',
+        path: 'docs-djdao',
+        routeBasePath: 'djdao',
+        sidebarPath: './sidebars-djdao.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'gamo2',
+        path: 'docs-gamo2',
+        routeBasePath: 'gamo2',
+        sidebarPath: './sidebars-gamo2.ts',
+      },
+    ],
   ],
 
   themes: [
@@ -64,7 +82,7 @@ const config: Config = {
       hashed: true,
       language: ['zh', 'en', 'ja'],
       indexBlog: false,
-      docsRouteBasePath: '/',
+      docsRouteBasePath: ['/', '/djdao', '/gamo2'],
     }],
   ],
 
@@ -86,14 +104,50 @@ const config: Config = {
       logo: {
         alt: 'nanos world',
         src: 'img/nanos-world.png',
-        href: 'https://nanos-world.com/'
+        href: '/',
       },
       items: [
         {
+          type: 'search',
+          position: 'left',
+        },
+        {
           type: 'doc',
           docId: 'welcome',
-          position: 'left',
-          label: 'docs',
+          docsPluginId: 'djdao',
+          position: 'right',
+          label: 'DJDAO',
+        },
+        {
+          type: 'doc',
+          docId: 'welcome',
+          docsPluginId: 'gamo2',
+          position: 'right',
+          label: 'GAMO2',
+        },
+        {
+          href: 'https://discord.gg/your-invite',
+          position: 'right',
+          className: 'header-right-link header-discord-link',
+          'aria-label': 'Discord',
+        },
+        {
+          href: 'https://x.com/GamoTwo',
+          position: 'right',
+          className: 'header-right-link header-twitter-link',
+          'aria-label': 'Twitter',
+        },
+        {
+          href: 'https://www.dj-dao.com',
+          position: 'right',
+          className: 'header-right-link header-djdao-link',
+          'aria-label': 'DJ DAO',
+        },
+        {
+          href: 'https://gamo2.com',
+          position: 'right',
+          className: 'header-right-link header-gamo2-link',
+          'aria-label': 'GAMO2',
         },
         {
           type: 'localeDropdown',
@@ -109,10 +163,6 @@ const config: Config = {
               value: '<a title="Help Us Translate" target="_blank" href="https://crowdin.com/project/nanos-world-docs/"><img src="https://badges.crowdin.net/nanos-world-docs/localized.svg"></a>'
             }
           ],
-        },
-        {
-          type: 'search',
-          position: 'right',
         },
       ],
     },

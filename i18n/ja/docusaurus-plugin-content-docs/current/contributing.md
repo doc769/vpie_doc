@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
-sidebar_label: "🤝 ドキュメント貢献"
+sidebar_label: "ドキュメント貢献"
+sidebar_class_name: sidebar-icon-contributing
 ---
 
 # ドキュメント貢献

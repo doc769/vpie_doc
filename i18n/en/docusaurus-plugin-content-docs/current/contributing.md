@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
-sidebar_label: "🤝 Contribute to Docs"
+sidebar_label: "Contribute to Docs"
+sidebar_class_name: sidebar-icon-contributing
 ---
 
 # Contribute to Docs

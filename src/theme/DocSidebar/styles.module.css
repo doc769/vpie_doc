@@ -1,0 +1,28 @@
+.topicSwitcher {
+  display: flex;
+  gap: 0;
+  padding: 0.75rem 1rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.topicTab {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.topicTab:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--ifm-color-primary);
+  border-bottom-color: var(--ifm-color-primary);
+}

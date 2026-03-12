@@ -1,16 +1,13 @@
 ---
 sidebar_position: 1
-sidebar_label: "👋 ようこそ"
+sidebar_label: "ようこそ"
+sidebar_class_name: sidebar-icon-welcome
 slug: /
 ---
 
 # nanos world へようこそ
 
-**nanos world** 公式ドキュメントへようこそ！
+**nanos world** 公式ドキュメントへようこそ！製品を選択してください：
 
-nanos world は、プレイヤーが無限のゲームモードを作成・体験できるマルチプレイヤーサンドボックスゲームプラットフォームです。
-
-## クイックリンク
-
-- [基本コンセプト](getting-started/essential-concepts) - コアコンセプトを学ぶ
-- [クイックスタート](getting-started/quick-start) - すぐに始めましょう
+- [DJDAO ドキュメント](/djdao) - DJDAO 製品ドキュメント
+- [GAMO2 ドキュメント](/gamo2) - GAMO2 製品ドキュメント

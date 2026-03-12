@@ -1,16 +1,13 @@
 ---
 sidebar_position: 1
-sidebar_label: "👋 Welcome"
+sidebar_label: "Welcome"
+sidebar_class_name: sidebar-icon-welcome
 slug: /
 ---
 
 # Welcome to nanos world
 
-Welcome to **nanos world** official documentation!
+Welcome to **nanos world** official documentation! Please select your product:
 
-nanos world is a multiplayer sandbox game platform that allows players to create and experience unlimited game modes.
-
-## Quick Links
-
-- [Essential Concepts](getting-started/essential-concepts) - Learn the core concepts
-- [Quick Start](getting-started/quick-start) - Start your journey right away
+- [DJDAO Documentation](/djdao) - DJDAO product documentation
+- [GAMO2 Documentation](/gamo2) - GAMO2 product documentation
