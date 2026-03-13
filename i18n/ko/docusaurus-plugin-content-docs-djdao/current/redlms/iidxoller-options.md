@@ -1,5 +1,5 @@
 ---
-sidebar_position: 100
+sidebar_position: 2
 sidebar_label: "IIDXOLLER Options 使用手册"
 ---
 

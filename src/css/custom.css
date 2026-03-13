@@ -273,10 +273,9 @@ svg[class^='iconLanguage'] {
 
 /* Main content */
 @media screen and (min-width: 1600px) {
-	/* Center page TODO: only fullscreen */
-	.navbar__inner, .main-wrapper {
-		width: 80%;
-		margin: 0 auto;
+	.navbar__inner {
+		width: 100%;
+		margin: 0;
 	}
 
 	article,
@@ -317,6 +316,15 @@ article p img {
 	font-size: .875rem;
 }
 
+/* Sidebar flush left */
+aside.theme-doc-sidebar-container {
+	margin-left: 0 !important;
+}
+
+.theme-doc-sidebar-container > div {
+	left: 0 !important;
+}
+
 .tippy-box .theme-code-block {
 	margin: 0;
 }
@@ -332,6 +340,13 @@ blockquote {
 /* 顶级分类：大号加粗 */
 .theme-doc-sidebar-item-category-level-1 >
 .menu__list-item-collapsible .menu__link {
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--ifm-color-emphasis-900);
+}
+
+/* 顶级链接项：加粗（与分类同级的产品页面） */
+.theme-doc-sidebar-item-link-level-1 > .menu__link {
 	font-size: 1.05rem;
 	font-weight: 700;
 	color: var(--ifm-color-emphasis-900);
@@ -374,8 +389,10 @@ blockquote {
 	border-radius: var(--sidebar-active-radius);
 }
 
-.theme-doc-sidebar-item-category-level-1 {
-	margin-top: 2rem !important;
+/* 顶级项紧凑间距 */
+.theme-doc-sidebar-item-category-level-1,
+.theme-doc-sidebar-item-link-level-1 {
+	margin-top: 0.35rem !important;
 }
 
 /* ===== Sidebar Icons ===== */
@@ -435,6 +452,13 @@ html[data-theme="dark"] .medium-zoom-overlay {
 	margin-left: 1rem;
 }
 
+/* Search bar wider */
+.navbar .DocSearch-Button,
+.navbar .navbar__search-input,
+.navbar [class*="searchBarContainer"] {
+	width: 280px;
+}
+
 .header-right-link:hover {
 	opacity: 0.7;
 }
@@ -442,12 +466,12 @@ html[data-theme="dark"] .medium-zoom-overlay {
 .header-right-link:before {
 	content: '';
 	display: flex;
-	width: 26px;
-	height: 28px;
+	width: 18px;
+	height: 18px;
 }
 
 .header-right-link {
-	padding: 0 0.4rem;
+	padding: 0 0.35rem;
 }
 
 /* Last item resets to original padding */
@@ -455,68 +479,82 @@ html[data-theme="dark"] .medium-zoom-overlay {
 	padding-right: var(--ifm-navbar-item-padding-horizontal);
 }
 
+/* Divider after GAMO2 nav text link */
+.navbar__items--right a.navbar__item[href*="/gamo2"] {
+	margin-right: 0.5rem;
+	padding-right: 1rem;
+	border-right: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Divider after gamo2 icon link */
+.header-gamo2-link {
+	margin-right: 0.5rem;
+	padding-right: 0.75rem !important;
+	border-right: 1px solid var(--ifm-color-emphasis-300);
+}
+
 .header-github-link:before {
-	background: no-repeat center/22px url("/img/social/github-black.svg");
+	background: no-repeat center/18px url("/img/social/github-black.svg");
 }
 
 html[data-theme='dark'] .header-github-link:before {
-	background: no-repeat center/22px url("/img/social/github-white.svg");
+	background: no-repeat center/18px url("/img/social/github-white.svg");
 }
 
 .header-discord-link:before {
-	background: no-repeat center/26px url("/img/social/discord-color.svg");
+	background: no-repeat center/18px url("/img/social/discord-color.svg");
 }
 
 html[data-theme='dark'] .header-discord-link:before {
-	background: no-repeat center/26px url("/img/social/discord-white.svg");
+	background: no-repeat center/18px url("/img/social/discord-white.svg");
 }
 
 .header-bugs-link:before {
-	background: no-repeat center/26px url("/img/social/bugs-color.svg");
+	background: no-repeat center/18px url("/img/social/bugs-color.svg");
 }
 
 html[data-theme='dark'] .header-bugs-link:before {
-	background: no-repeat center/26px url("/img/social/bugs-white.svg");
+	background: no-repeat center/18px url("/img/social/bugs-white.svg");
 }
 
 .header-status-link:before {
-	background: no-repeat center/20px 28px url("/img/social/status-color.png");
+	background: no-repeat center/18px url("/img/social/status-color.png");
 }
 
 html[data-theme='dark'] .header-status-link:before {
-	background: no-repeat center/20px 28px url("/img/social/status-white.png");
+	background: no-repeat center/18px url("/img/social/status-white.png");
 }
 
 .header-account-link:before {
-	background: no-repeat center/26px url("/img/social/account-color.svg");
+	background: no-repeat center/18px url("/img/social/account-color.svg");
 }
 
 html[data-theme='dark'] .header-account-link:before {
-	background: no-repeat center/26px url("/img/social/account-white.svg");
+	background: no-repeat center/18px url("/img/social/account-white.svg");
 }
 
 .header-twitter-link:before {
-	background: no-repeat center/22px url("/img/social/x-color.svg");
+	background: no-repeat center/16px url("/img/social/x-color.svg");
 }
 
 html[data-theme='dark'] .header-twitter-link:before {
-	background: no-repeat center/22px url("/img/social/x-white.svg");
+	background: no-repeat center/16px url("/img/social/x-white.svg");
 }
 
 .header-djdao-link:before {
-	background: no-repeat center/22px url("/img/social/djdao-color.png");
+	background: no-repeat center/18px url("/img/social/djdao-color.png");
 }
 
 html[data-theme='dark'] .header-djdao-link:before {
-	background: no-repeat center/22px url("/img/social/djdao-color.png");
+	background: no-repeat center/18px url("/img/social/djdao-color.png");
 }
 
 .header-gamo2-link:before {
-	background: no-repeat center/22px url("/img/social/gamo2-color.png");
+	background: no-repeat center/18px url("/img/social/gamo2-color.png");
 }
 
 html[data-theme='dark'] .header-gamo2-link:before {
-	background: no-repeat center/22px url("/img/social/gamo2-color.png");
+	background: no-repeat center/18px url("/img/social/gamo2-color.png");
 }
 
 /* Scripting Components */

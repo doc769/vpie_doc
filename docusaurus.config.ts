@@ -126,7 +126,7 @@ const config: Config = {
           label: 'GAMO2',
         },
         {
-          href: 'https://discord.gg/your-invite',
+          href: 'https://discord.com',
           position: 'right',
           className: 'header-right-link header-discord-link',
           'aria-label': 'Discord',
