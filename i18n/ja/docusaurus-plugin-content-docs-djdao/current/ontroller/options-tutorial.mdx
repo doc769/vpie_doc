@@ -1,0 +1,96 @@
+---
+sidebar_position: 2
+sidebar_label: "ONTROLLER Options 使い方"
+---
+
+# ONTROLLER Optionsの使い方
+
+## 0. ファームウェアとソフトウェアをダウンロード
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/SUPPORT/ONTROLLER-options-V1.8-20231116.zip">ONTROLLER Options V1.8</a>
+</div>
+
+**更新内容：**
+
+1. V35 ファームウェア付属；
+2. デフォルトは V35 ファームウェア適用；
+
+## 1. ONTROLLER Optionsとは何？
+
+ONTROLLER OptionsはDAOデザインチームが開発したONTROLLERのパラメーターを調整できるソフトウェアです。パラメーターを調整することで、ONTROLLERを使いやすくすることができます。
+
+## 2. 使用方法
+
+### 2.1 初めに
+
+1. USB type-bケーブルを接続します。type-bコネクターはONTROLLERに、type-aコネクターはPCに接続します（USB 3.0がお薦め）。
+2. Type-cポートに接続しなくても構いませんが、LHS7F2スイッチを使用の場合は、必ず、Type-cポートに接続してください。
+3. ONTROLLER Optionsの最新バージョンをダウンロードします。
+4. 圧縮ファイルを解凍し、下記内容を確認：
+   - `languagepack.xml`（言語ファイル）
+   - `ONTROLLER-Options-XXX.exe`（ソフトウェア本体）
+   - `SS530_ONG_APP_RC_VXXX.bin`（デフォルトファームウェア）
+
+### 2.2 ファームウェアの更新手順
+
+1. 「開く」をクリック；
+2. `SS530_ONG_APP_RC_VXXX.bin` を選択；
+3. 「アップグレード」をクリック；
+
+### 2.3 モード説明
+
+![モード説明](/img/docs/ontroller/options-tutorial/ja/section2-3-mode.png)
+
+| 番号 | 機能説明 |
+|------|----------|
+| A | モードドロップダウンリスト |
+| B | クリックして、モードを切り替える |
+
+### 2.4 レバー校正
+
+レバーは出荷時に、すでに校正済みです。
+
+レバーに異常反応もしくはご自身で解体されていた場合、再校正をお薦めします。
+
+![レバー校正](/img/docs/ontroller/options-tutorial/ja/section2-4-calibration.png)
+
+| 番号 | 機能説明 |
+|------|----------|
+| A | 校正ボタン |
+| B | 校正手順 |
+| C | 校正完了後、「保存して終了」をクリック |
+| D | レバーのリアルタイム反応 |
+
+### 2.5 グローバル機能説明
+
+![グローバル機能](/img/docs/ontroller/options-tutorial/ja/section2-5-global.png)
+
+| 番号 | 機能説明 |
+|------|----------|
+| A | HIDライトへの対応、オンがお薦め |
+| B | 白熱電球のエフェクトに擬似 |
+| C | サイドボタンの輝度 |
+| D | 正方形ボタンの輝度 |
+| E | サイドボタンのライトモードを設定 |
+| F | 正方形ボタンのライトモードを設定 |
+| G | 連続クリックして、RGBWを順番で切替。全てのライト状況を確認 |
+| H | UI言語を切り替え。他の言語を適用されたい場合、XMLファイルをご自身で書き換えてください |
+
+### 2.6 キーボードモードの機能説明
+
+ONTROLLERの全てのボタンには、ボタン割当、ボタンを押す際と放す際のライト色をカスタマイズできます。
+
+ボタン割当をカスタマイズする際、レバーを真ん中に固定してください。偏る場合は、レバーの左もしくは右に適用されてしまいますので、ご注意ください。
+
+ボタンを押さない状態のライトを消灯したい場合、黒いRGB（0,0,0）に設定してください。
+
+![キーボードモード](/img/docs/ontroller/options-tutorial/ja/section2-6-keyboard.png)
+
+| 番号 | 機能説明 |
+|------|----------|
+| A | 現在のボタン割当を表示。デフォルトはShift |
+| B | レバーを左側へ移動するボタン割当、デフォルトはLeft |
+| C | レバーを右側へ移動するボタン割当、デフォルトはRight |
+| D | 左と右の間のデッドゾーン、小さく設定する場合、レバーの反応が不安定になりますので、お薦めしません |
+| E | 外側の色はボタンを放す際のライト色 |

@@ -1,0 +1,96 @@
+---
+sidebar_position: 2
+sidebar_label: "ONTROLLER Options 사용 방법"
+---
+
+# ONTROLLER Options 사용 방법
+
+## 0. ONTROLLER Options 소프트웨어 및 펌웨어 다운로드
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/SUPPORT/ONTROLLER-options-V1.8-20231116.zip">ONTROLLER Options V1.8</a>
+</div>
+
+**업그레이드 내용：**
+
+1. V35 펌웨어 포함；
+2. 출고 펌웨어는 V35 펌웨어；
+
+## 1. ONTROLLER Options란?
+
+ONTROLLER Options는 DAO 디자인팀이 개발한 소프트웨어로, ONTROLLER의 파라미터를 편리하게 조정할 수 있습니다. 파라미터를 조정하여 ONTROLLER를 더욱 편안하게 사용할 수 있습니다.
+
+## 2. 사용 방법
+
+### 2.1 시작하기
+
+1. USB type-b 케이블을 연결합니다. 한쪽은 ONTROLLER에, 다른 쪽은 컴퓨터 USB 포트에 연결합니다（USB 3.0 포트 권장）.
+2. Type-c 포트는 연결해도 되고 안 해도 됩니다.（LHS7F2 마이크로 스위치를 사용하는 경우에는 Type-c 포트를 반드시 연결해야 합니다）.
+3. ONTROLLER Options 최신 버전을 다운로드합니다.
+4. 압축 파일을 해제하면 다음 파일이 있습니다：
+   - `languagepack.xml`（언어 파일）
+   - `ONTROLLER-Options-XXX.exe`（소프트웨어 본체）
+   - `SS530_ONG_APP_RC_VXXX.bin`（출고 펌웨어）
+
+### 2.2 펌웨어 업데이트 방법
+
+1. 「열기」버튼을 클릭합니다；
+2. 디렉토리에서 `SS530_ONG_APP_RC_VXXX.bin` 파일을 찾습니다；
+3. 「업그레이드」버튼을 클릭합니다；
+
+### 2.3 모드 설명
+
+![모드 설명](/img/docs/ontroller/options-tutorial/zh/section2-3-mode.png)
+
+| 번호 | 기능 설명 |
+|------|-----------|
+| A | 모드 선택 드롭다운 목록 |
+| B | 버튼을 클릭하여 모드 전환 |
+
+### 2.4 레버 캘리브레이션
+
+레버는 출고 시 이미 캘리브레이션이 완료되어 있습니다.
+
+레버에 이상 반응이 있거나 직접 분해한 경우, 재캘리브레이션을 권장합니다.
+
+![레버 캘리브레이션](/img/docs/ontroller/options-tutorial/zh/section2-4-calibration.png)
+
+| 번호 | 기능 설명 |
+|------|-----------|
+| A | 캘리브레이션 버튼 |
+| B | 캘리브레이션 방법 |
+| C | 캘리브레이션 완료 후 저장 후 종료를 클릭 |
+| D | 현재 레버 출력의 피드백 |
+
+### 2.5 전역 기능 설명
+
+![전역 기능](/img/docs/ontroller/options-tutorial/zh/section2-5-global.png)
+
+| 번호 | 기능 설명 |
+|------|-----------|
+| A | HID Output 조명 지원, 켜는 것을 권장 |
+| B | 백열전구 효과 시뮬레이션 |
+| C | 사이드 버튼 밝기 |
+| D | 정사각형 버튼 6개의 밝기 |
+| E | 사이드 버튼의 라이트 모드 설정 |
+| F | 정사각형 버튼 6개의 라이트 모드 설정 |
+| G | 연속 클릭하여 RGBW 전환, 모든 조명이 정상인지 확인 |
+| H | UI 언어 전환. 다른 언어를 사용하려면 XML 파일을 직접 수정하세요 |
+
+### 2.6 키보드 모드의 기능
+
+ONTROLLER의 모든 버튼에 키보드 값, 버튼 누를 때의 조명 색상, 버튼 뗄 때의 조명 색상을 커스터마이즈할 수 있습니다.
+
+키 값을 매핑할 때는 레버를 중앙에 놓으세요. 그렇지 않으면 레버의 Left 또는 Right 키 값으로 매핑됩니다.
+
+버튼을 누르지 않았을 때 조명이 켜지지 않게 하려면 검은색 RGB（0,0,0）으로 설정하세요.
+
+![키보드 모드](/img/docs/ontroller/options-tutorial/zh/section2-6-keyboard.png)
+
+| 번호 | 기능 설명 |
+|------|-----------|
+| A | 현재 키 값 표시, 기본값은 Shift |
+| B | 레버를 왼쪽으로 이동하는 키 값, 기본값은 Left |
+| C | 레버를 오른쪽으로 이동하는 키 값, 기본값은 Right |
+| D | Left와 Right 사이의 데드존, 너무 작게 설정하면 Left와 Right 사이에서 떨림이 발생하므로 권장하지 않음 |
+| E | 외곽 색상은 현재 버튼을 뗄 때의 조명 색상 |

@@ -1,0 +1,152 @@
+---
+sidebar_position: 1
+sidebar_label: "TAIKOLLER Options 使用教程"
+---
+
+# 如何使用 TAIKOLLER Options
+
+## 0. 下载 TAIKOLLER Options 软件和固件
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/SUPPORT/TAIKOLLER-options-V2.5-20230707.zip">TAIKOLLER Options V2.5</a>
+  <a className="button button--secondary" href="/SUPPORT/TaikollerOptionsV2.4.zip">TAIKOLLER Options V2.4</a>
+</div>
+
+**V2.5 更新说明：**
+
+1. 固件，解决 PS4 无法正常工作的 bug；
+2. 固件，解决一些特定情况下的串音；
+3. Options V2.5，解决在 windows7 无法正常工作的 bug；
+
+## 1. 什么是 TAIKOLLER Options
+
+TAIKOLLER Options 是 DAOdesign team 设计的一款软件，可以方便的调节 TAIKOLLER 的参数。你能够通过调节参数，让 TAIKOLLER 使用起来更加舒适。
+
+## 2. 如何使用
+
+### 2.1 初始界面
+
+![初始界面](/img/docs/taikoller/options-tutorial/zh/section2-interface.png)
+
+| 编号 | 功能说明 |
+|------|----------|
+| A | 弹出烧录固件窗口 |
+| B | 弹出自定义图片窗口 |
+| C | 弹出高级设置窗口 |
+| D | 切换不同模式 |
+| E | 可以保存 3 组不同灵敏度，方便应对不同的鼓棒类型；或者朋友的使用习惯 |
+| F | 自动生成设置图片，方便发布在社交媒体上 |
+| G | 清空统计数据，可以任意使用 |
+| H | 恢复出厂设置，慎用！！！ |
+| I | 显示当前敲击的力度、敲击数量。当敲击力度＜阈值时，HIT 不做统计 |
+| J | 设置阈值数值。建议＜20 |
+| K | 可以拖动滑条进行设置阈值，功能与 J 相同 |
+| L | 单击鼠标右键，弹出语言切换菜单。支持 English，日本語，中文。 |
+
+### 2.2 固件
+
+<Steps>
+<Step title="拖入固件文件">
+
+拖动固件 `*.skystar` 到这个窗口。
+
+![固件升级窗口](/img/docs/taikoller/options-tutorial/zh/section2-firmware.png)
+
+</Step>
+<Step title="点击升级">
+
+点击升级即可。
+
+</Step>
+</Steps>
+
+### 2.3 图片
+
+![自定义图片窗口](/img/docs/taikoller/options-tutorial/zh/section2-picture.png)
+
+| 编号 | 功能说明 |
+|------|----------|
+| A | 按照说明，拖动图片到对应的位置即可 |
+| B | 恢复出厂设置的图片。慎用！！！ |
+| C | 必须点击 Save，自定义的图片才能生效。 |
+
+### 2.4 高级设置
+
+![高级设置窗口](/img/docs/taikoller/options-tutorial/zh/section2-advanced.png)
+
+A～F 的数值都代表毫秒（ms）。
+
+| 编号 | 功能说明 |
+|------|----------|
+| A | 该参数仅仅对 PS4 模式有效。初始值 18ms，如果在 PS4/5 使用时，偶尔短时间无输出键值，可以增加这个值。建议范围：18~25 |
+| B | 该参数仅仅对 SWITCH 模式有效。初始值 25ms，如果在使用时，偶尔短时间无输出键值，可以增加这个值。建议范围：25~32 |
+| C | 该参数仅仅对 CONTROLLER 模式有效。如果在 TJAplayer/Opentaiko 使用，建议在软件中重新映射键位。建议范围：6-18 |
+| D | 该参数仅仅对 Keyboard 模式有效。如果在 TJAplayer/Opentaiko 使用，建议在软件中重新映射键位。建议范围：6-18 |
+| E | 该参数仅仅对 次郎1P 模式有效。如果在 TJAplayer/Opentaiko 使用，建议在软件中重新映射键位。建议范围：18-22 |
+| F | 该参数仅仅对 次郎2P 模式有效。如果在 TJAplayer/Opentaiko 使用，建议在软件中重新映射键位。建议范围：18-22 |
+| G | 100% 同时敲击大蓝音符时，需要触发的阈值。如果已经习惯错开敲击大蓝音符，可以不用在意。建议范围：15-20。如果单击 Ka 时，同时输出左右蓝色音符，建议增加该值。 |
+| H | 100% 同时敲击大红音符时，需要触发的阈值。如果已经习惯错开敲击大红音符，可以不用在意。建议范围：35-40。如果单击 Dong 时，同时输出左右红色音符，建议增加该值。 |
+| I | 设置后，必须保存才生效。 |
+
+## 3. 常见问题
+
+<details>
+<summary>如果两个人同时玩，怎么办？</summary>
+
+- PS4/5，Switch 平台。使用对应的模式即可。
+- TJAplayer / Opentaiko 程序。建议 Player1 使用 CONTROLLER 模式，Player 2 使用 Keyboard 模式。
+- 次郎 1/2 程序。建议 Player1 使用 次郎1P 模式，Player2 使用 次郎 2P 模式。
+
+</details>
+
+<details>
+<summary>为什么 Keyboard 模式下，手柄的键值那么奇怪？</summary>
+
+Keyboard 模式下的手柄键值是按照 PC XBOX 的手柄对应的值。按键所处的位置相当于 XBOX 手柄对应位置的功能，方便记忆。
+
+</details>
+
+<details>
+<summary>为什么要设置蓝色大饼、红色大饼？</summary>
+
+设置的值为阈值。这个值仅仅在 100% 同时敲击时，才会生效（左右手的误差在 3 毫秒内）。
+
+如果你习惯使用错开敲击的方式，来完成蓝色大饼或者红色大饼，则不用理会这个设置。
+
+如果你在 TJAplayer / Opentaiko 上使用，建议设置为 254。这样可以最大限度限制同色串音（敲 Dong 时，同时输出 2 个 Dong；敲 Ka 时，同时输出 2 个 Ka）。
+
+</details>
+
+<details>
+<summary>保持时间的单位是什么，为什么要开放这个设置？</summary>
+
+保持时间的单位是毫秒（ms）。
+
+- 设置的太大，会造成高速连击减少。
+- 设置的太小，在对应的主机平台，可能会出现偶尔敲击无输出的情况。通常会出现 0.5~1 秒内，敲击没有任何反应，然后又恢复正常。
+
+我们经过了大量的测试，但是测试结果在一个很小的范围浮动。为了方便玩家找到适合自己的极限值，我们决定开放这个设置。
+
+</details>
+
+<details>
+<summary>保持时间设置逻辑</summary>
+
+对于 TJAplayer / Opentaiko，理论支持最小值为 2ms。但是我们建议设置 6ms 以上。
+
+- 在 6ms 的情况下，黄条的滚奏输出数量会比街机多一些（120Hz 版本）。对于极限推分的玩家，适合使用这个值。
+- 在 12-16ms 的情况下，黄条滚奏输出的数量与街机基本一致（120Hz 版本），具体的数值，我们会通过更多专业的玩家反馈进行更新。
+
+</details>
+
+<details>
+<summary>次郎1P，次郎2P，Keyboard 模式有什么区别？</summary>
+
+三个模式都是键盘。不同的是：
+
+- 次郎1P、次郎2P 模式对于手柄的键值，专门对次郎软件进行优化，方便使用手柄进行操作。PS：次郎 2P 模式是为了方便同时 2 台太鼓同时在次郎软件上工作。
+- Keyboard 模式对于手柄的键值，专门对 PC XBOX 的游戏进行优化，方便使用手柄进行操作。
+
+如果使用 TJAplayer / Opentaiko，这 3 种模式都是可以使用的。
+
+</details>

@@ -1,0 +1,202 @@
+---
+sidebar_position: 1
+sidebar_label: "NOSTROLLER Options 使用方法"
+---
+
+# NOSTROLLER Options の使用方法
+
+## 注意事項
+
+:::warning 可能な問題
+**FNボタンを押しながらUSB Type-Bを指すと、正常に作動できなくなります**
+
+対処方法：USB Type-Bを抜いて、FNボタンを押さずに再度USB Type-Bをさして解決できます。
+:::
+
+:::warning 初期状態に戻す
+**初期状態に戻したら、リセットされる設定はなんでしょうか。**
+
+対処方法：全ての設定が初期状態に戻されますので、校正し直す必要があります。必要のない場合は、この機能を使用しないようご注意ください。
+:::
+
+## ソフトウェアダウンロード
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.1_20230116.zip">NOSTROLLER Options V2.1</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.0_20220830.zip">NOSTROLLER Options V2.0</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/NOSTROLLER_Options_V1.8_20220816.zip">NOSTROLLER Options V1.8</a>
+</div>
+
+## 1. どうやってファームウェアを更新しますか？
+
+<Steps>
+<Step title="ソフトウェアを起動してデバイスを接続">
+
+1. NOSTROLLER options.exe を起動させます
+2. NOSTROLLER をPCに接続します
+
+![ファームウェア更新画面](/img/docs/nostroller/options-tutorial/ja/section1-firmware-update.png)
+
+</Step>
+<Step title="ファームウェア���ァイルを選択">
+
+「開く...」をクリックして、XXX.skystar と言う名のファイルを選択します。
+
+</Step>
+<Step title="更新開始">
+
+update をクリックして、完了を待ちます。
+
+</Step>
+<Step title="完了">
+
+ファームウェア更新後、直接有効になりますので、USB の挿し直しは要りません。
+
+</Step>
+</Steps>
+
+## 2. どうやってライトの色を調整しますか？
+
+![ライト色調整画面](/img/docs/nostroller/options-tutorial/ja/section2-light-color.png)
+
+1. **全てのボタンが同じ色**：ボタンを押したら、選択された色のライトが点灯します
+2. **ボタンごとに色を設定**：ボタンを押したら、選択された色のライトが点灯します
+3. **ボタンごとに2種類の色を設定**：31 はボタン待機状態の色で、32 はボタンが押された時の色です
+
+輝度はHSVのVによって変わります。Vの数値が大きいほど、輝度が高く、Vの数値が小さいほど、輝度が低いです。
+
+![HSVカラーピッカー](/img/docs/nostroller/options-tutorial/hsv-color-picker.png)
+
+4. **輝度の推奨設定**：
+   - Type-cの給電が 5V 500mA の場合、最大輝度は50-60%がお勧め
+   - 給電が 5V 2A の場合、輝度を調整する必要はありません
+   - 眩し過ぎた場合は、輝度を下げてください
+
+5. こちらの設定は HID モードで、かつ Specietxxls を使用する場合のみ有効になります
+6. 設定変更したら、セーブボタンをクリックしてから有効になります
+7. 書き出された設定内容に、①②③のパラメーターは含まれていますが、④と⑤は含まれていません。書き出されたファイルはPNGファイルで、アプリで直接PNG画像を調整できます。画像内の単色区域はグラデーションに設定できませんので、単色でお願いします
+
+## 3. どうやって打鍵の強弱を調整しますか？
+
+![打鍵強弱調整画面](/img/docs/nostroller/options-tutorial/ja/section3-force-adjust.png)
+
+### 注意事項
+
+- どのモードで打鍵の強弱を調整しても、全てのモードに適用されます
+- パラメーターを調整したら、セーブボタンをクリックしてから有効になります
+- MIDI モードもしくは HID モードに切り替えたら、調整後の効果を確認できます
+
+### お勧めのパラメーター
+
+1. **MIDI の調節**：80 以内に
+2. **HID の調節**：30-80 以内に
+3. **Keyboard の調節**：数値が大きすぎると、ボタンを底まで押しても反応しない可能性があります
+4. **Controller の調節**：数値が大きすぎると、ボタンを底まで押しても反応しない可能性があります
+
+## 4. どうやって校正しますか？
+
+### 校正前の準備
+
+<Steps>
+<Step title="工具を準備">
+
+六角スクリュードライバー、型番は H2.5 です。
+
+![H2.5六角スクリュードライバー](/img/docs/nostroller/options-tutorial/screwdriver.png)
+
+</Step>
+<Step title="底面のネジを外す">
+
+画像通りに底側のネジを外します。
+
+![底面ネジ位置](/img/docs/nostroller/options-tutorial/bottom-screws.png)
+
+</Step>
+<Step title="金属��ーを取り外す">
+
+金属バーを外して、後の校正に使います。
+
+![金属バーを取り外す](/img/docs/nostroller/options-tutorial/metal-bar.png)
+
+</Step>
+</Steps>
+
+### 校正手順
+
+<Steps>
+<Step title="校正開始">
+
+通常の場合は、校正を行う必要はありません。下記状況だけ、校正が必要です。条件をチェックして、「次へ」をクリックします。
+
+![校正手順1](/img/docs/nostroller/options-tutorial/ja/calibration-step1.png)
+
+</Step>
+<Step title="続行">
+
+「次へ」をクリックします。
+
+![校正手順2](/img/docs/nostroller/options-tutorial/ja/calibration-step2.png)
+
+</Step>
+<Step title="ボタンに触れない">
+
+校正中は、ボタンに触れないでください。
+
+![校正手順3](/img/docs/nostroller/options-tutorial/ja/calibration-step3.png)
+
+</Step>
+<Step title="校正プロセス">
+
+「スタート」をクリックして、待機状態の校正完了を待ちます。
+
+![校正手順4](/img/docs/nostroller/options-tutorial/ja/calibration-step4.png)
+
+</Step>
+<Step title="金属バーを押す">
+
+先ほどの金属バーを鍵盤の上に置いて、全てのキーを押します。
+
+- **金属バーの置く位置**：画像の通りでお願いします
+- **キーを押す力**：全てのキーが底に付く程度でお願いします
+
+![金属バーを押す](/img/docs/nostroller/options-tutorial/press-metal-bar.png)
+
+</Step>
+<Step title="校正続行">
+
+「次へ」をクリックします。
+
+![校正手順6](/img/docs/nostroller/options-tutorial/ja/calibration-step6.png)
+
+</Step>
+<Step title="押す動作を確認">
+
+全てのキーを押しながら、「スタート」を押します。
+
+![校正手順7](/img/docs/nostroller/options-tutorial/ja/calibration-step7.png)
+
+</Step>
+<Step title="完了を待つ">
+
+校正完了を待ちます。
+
+![校正手順8](/img/docs/nostroller/options-tutorial/ja/calibration-step8.png)
+
+</Step>
+<Step title="校正完了">
+
+金属バーを放して、「完了」をクリックします。
+
+![校正手順9](/img/docs/nostroller/options-tutorial/ja/calibration-step9.png)
+
+</Step>
+<Step title="金属バーを戻す">
+
+金属バーをコントローラーに付け戻します。
+
+</Step>
+</Steps>
+
+:::tip
+ご不明な点がございましたら、テクニカルサポートまでお問い合わせください。
+:::

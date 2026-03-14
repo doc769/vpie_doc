@@ -1,0 +1,202 @@
+---
+sidebar_position: 1
+sidebar_label: "NOSTROLLER Options Tutorial"
+---
+
+# NOSTROLLER Options Software Tutorial
+
+## Caution
+
+:::warning Possible Issue
+**Do not hold FN button while plugging in USB Type-B, this will cause the product to malfunction.**
+
+Solution: Unplug USB Type-B, do not touch FN, then plug in USB Type-B again.
+:::
+
+:::warning Factory Reset
+**What settings will be reset after factory reset.**
+
+Solution: All settings will be restored to default, and recalibration is required. Do not use this function unless necessary.
+:::
+
+## Software Download
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.1_20230116.zip">NOSTROLLER Options V2.1</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.0_20220830.zip">NOSTROLLER Options V2.0</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/NOSTROLLER_Options_V1.8_20220816.zip">NOSTROLLER Options V1.8</a>
+</div>
+
+## 1. How to Update Firmware?
+
+<Steps>
+<Step title="Open software and connect device">
+
+1. Open NOSTROLLER options.exe
+2. Connect NOSTROLLER controller to computer
+
+![Firmware update interface](/img/docs/nostroller/options-tutorial/en/section1-firmware-update.png)
+
+</Step>
+<Step title="Drag firmware file">
+
+Drag XXX.skystar file to the "Firmware Update" area.
+
+</Step>
+<Step title="Start upgrade">
+
+Click "Upgrade" button and wait for completion.
+
+</Step>
+<Step title="Done">
+
+After firmware update completes, the product will take effect automatically without re-plugging USB.
+
+</Step>
+</Steps>
+
+## 2. How to Adjust Light Color?
+
+![Light color adjustment](/img/docs/nostroller/options-tutorial/en/section2-light-color.png)
+
+1. **All keys use the same color**: When a key is pressed, the light turns on with the corresponding color
+2. **Each key can be set to one color independently**: When a key is pressed, the light turns on with the corresponding color
+3. **Each key can be set to two colors independently**: 31 is the light color when key is not pressed, 32 is the light color when key is pressed
+
+The brightness depends on V in HSV. Higher V value means brighter, lower V value means dimmer.
+
+![HSV color picker](/img/docs/nostroller/options-tutorial/hsv-color-picker.png)
+
+4. **Brightness recommendations**:
+   - ype-C is connected to a 5V 500mA+ power supply, recommend max brightness 50-60%
+   - If connected to a 5V 2A+ power supply, no need to adjust max brightness
+   - If the light is too bright, you can lower the max brightness
+
+5. This setting only works in HID mode and when using Specietxxls
+6. Any setting must be saved to take effect
+7. Exported light data includes ①②③ light data, not including ④ and ⑤. Export format is PNG image, which can be modified directly in PNG using drawing software. Single color blocks in the image do not support gradients, only solid colors
+
+## 3. How to Adjust Force/Velocity?
+
+![Force adjustment](/img/docs/nostroller/options-tutorial/en/section3-force-adjust.png)
+
+### Usage Notes
+
+- In any mode, you can adjust the force for all modes
+- After adjusting parameters, you must save for them to take effect
+- Switch to MIDI or HID mode to see real-time effects
+
+### Parameter Recommendations
+
+1. **MIDI adjustment**: Recommended range 30-80
+2. **HID adjustment**: Recommended range 30-80
+3. **Keyboard adjustment**: If value is too high, keys may not output when bottomed out
+4. **Controller adjustment**: If value is too high, keys may not output when bottomed out
+
+## 4. How to Calibrate?
+
+### Preparation
+
+<Steps>
+<Step title="Prepare tools">
+
+You need an Allen screwdriver, model H2.5.
+
+![H2.5 Allen screwdriver](/img/docs/nostroller/options-tutorial/screwdriver.png)
+
+</Step>
+<Step title="Remove bottom screws">
+
+Turn NOSTROLLER over and remove the screws as shown.
+
+![Bottom screws location](/img/docs/nostroller/options-tutorial/bottom-screws.png)
+
+</Step>
+<Step title="Remove metal bar">
+
+Remove the metal bar from NOSTROLLER and set aside.
+
+![Remove metal bar](/img/docs/nostroller/options-tutorial/metal-bar.png)
+
+</Step>
+</Steps>
+
+### Calibration Steps
+
+<Steps>
+<Step title="Start calibration">
+
+No calibration needed under normal circumstances. Only calibrate in the following situations. If conditions are met, click Next button.
+
+![Calibration step 1](/img/docs/nostroller/options-tutorial/en/calibration-step1.png)
+
+</Step>
+<Step title="Continue">
+
+Click Next.
+
+![Calibration step 2](/img/docs/nostroller/options-tutorial/en/calibration-step2.png)
+
+</Step>
+<Step title="Do not touch keys">
+
+During calibration, do not touch any keys.
+
+![Calibration step 3](/img/docs/nostroller/options-tutorial/en/calibration-step3.png)
+
+</Step>
+<Step title="Calibration process">
+
+Wait for calibration process to complete.
+
+![Calibration step 4](/img/docs/nostroller/options-tutorial/en/calibration-step4.png)
+
+</Step>
+<Step title="Press metal bar">
+
+Press the metal bar removed from NOSTROLLER onto the keys.
+
+- **Press position**: Keep same as shown in image
+- **Press force**: Not too much force needed, press with one hand in the middle of the metal bar, let all keys bottom out
+
+![Press metal bar](/img/docs/nostroller/options-tutorial/press-metal-bar.png)
+
+</Step>
+<Step title="Continue calibration">
+
+Click Next.
+
+![Calibration step 6](/img/docs/nostroller/options-tutorial/en/calibration-step6.png)
+
+</Step>
+<Step title="Confirm pressing action">
+
+Ensure your pressing action is correct, click Next.
+
+![Calibration step 7](/img/docs/nostroller/options-tutorial/en/calibration-step7.png)
+
+</Step>
+<Step title="Wait for completion">
+
+Wait patiently for the progress bar to complete.
+
+![Calibration step 8](/img/docs/nostroller/options-tutorial/en/calibration-step8.png)
+
+</Step>
+<Step title="Calibration complete">
+
+You can now release the metal bar, click Finish.
+
+![Calibration step 9](/img/docs/nostroller/options-tutorial/en/calibration-step9.png)
+
+</Step>
+<Step title="Reinstall metal bar">
+
+You can reinstall the metal bar back to NOSTROLLER.
+
+</Step>
+</Steps>
+
+:::tip
+If you have any questions, please contact us for technical support.
+:::

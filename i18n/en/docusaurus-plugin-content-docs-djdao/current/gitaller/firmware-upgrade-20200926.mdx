@@ -1,8 +1,116 @@
 ---
-sidebar_position: 2
-sidebar_label: "GITALLER 升级固件教程 20200926"
+sidebar_position: 3
+sidebar_label: "GITALLER firmware update Guide 20200926"
 ---
 
-# GITALLER 升级固件教程 20200926
+# GITALLER firmware update Guide 20200926
 
-翻译正在建设中，敬请期待。
+## Download firmware
+
+<div style={{marginBottom: '1.5rem'}}>
+  <a className="button button--primary button--lg" href="https://www.dj-dao.com/firmware/Guitar_firmware_20200926.zip">Download firmware</a>
+</div>
+
+:::tip
+Please fully uncompress the file before use. Do not run it directly from the archive.
+:::
+
+## Firmware upgrade tutorial
+
+<Steps>
+<Step title="Uncompress the firmware archive">
+
+Uncompress the downloaded firmware archive to a local folder.
+
+</Step>
+<Step title="Confirm USB is unplugged">
+
+Confirm your GITALLER USB cable is unplugged from PC.
+
+</Step>
+<Step title="Enter firmware upgrade mode">
+
+Push START + SELECT buttons at the same time, do not release. Plug GITALLER USB cable to PC with your other hand. Then release the START + SELECT buttons.
+
+![Push START + SELECT](/img/docs/gitaller/firmware-20200926/step3-buttons.png)
+
+![Plug in USB](/img/docs/gitaller/firmware-20200926/step3-usb.png)
+
+</Step>
+<Step title="Open firmware upgrade program">
+
+Open `GITALLER_firmware_APP.exe`.
+
+![Open program](/img/docs/gitaller/firmware-20200926/step4-app.png)
+
+</Step>
+<Step title="Load firmware file">
+
+Click the **LoadFile** button, find your downloaded firmware folder, select `GITALLER_firmware_V1.0_20200926.bin`.
+
+![Click LoadFile](/img/docs/gitaller/firmware-20200926/step5-loadfile.png)
+
+![Select firmware file](/img/docs/gitaller/firmware-20200926/step6-select-bin.png)
+
+</Step>
+<Step title="Start upgrade">
+
+Click the **Start** button to begin updating. Wait for the progress bar to complete.
+
+![Click Start](/img/docs/gitaller/firmware-20200926/step7-start.png)
+
+![Wait for progress bar](/img/docs/gitaller/firmware-20200926/step8-progress.png)
+
+</Step>
+<Step title="Upgrade complete">
+
+After success, **replug your GITALLER USB cable** (very important).
+
+![Upgrade successful](/img/docs/gitaller/firmware-20200926/step9-success.png)
+
+:::warning
+If not successful, please retry from step 3.
+:::
+
+</Step>
+</Steps>
+
+## Features after firmware upgrade
+
+### WAILING BUTTON mode
+
+This is the default mode, no switching needed.
+
+Push B1+B2+B3+B4+B5+SELECT at the same time for 2 seconds — the gyroscope XYZ stops outputting, wailing_up and wailing_down output as two single button signals.
+
+![WAILING BUTTON mode](/img/docs/gitaller/firmware-20200926/wailing-button-mode.png)
+
+### WAILING XYZ mode
+
+This mode is for advanced players only. Beginners should not switch to this mode.
+
+Push B1+B2+B3+B4+B5+START at the same time for 2 seconds — wailing_up and wailing_down buttons stop outputting, the gyroscope XYZ outputs normally.
+
+![WAILING XYZ mode](/img/docs/gitaller/firmware-20200926/wailing-xyz-mode.png)
+
+## Problems solved
+
+1. On GITADORA trial 1.0, START button is the START function, SELECT button is the HELP function
+2. When setting up DTXmania, please use WAILING BUTTON mode. Both wailing_up and wailing_down buttons need to be mapped in DTXmania wailing config
+3. When using S tools or B tools: if mapping XYZ axis, please switch to WAILING XYZ mode; if mapping wailing_up and wailing_down buttons, please switch to WAILING BUTTON mode
+
+### GITADORA trial settings
+
+In GITADORA trial, the first button shows as 0, wailing_up shows as 10, wailing_down shows as 11.
+
+![GITADORA trial settings](/img/docs/gitaller/firmware-20200926/gitadora-trial-config.png)
+
+### DTXmania settings
+
+In DTXmania, the first button shows as 1, wailing_up shows as 11, wailing_down shows as 12.
+
+![DTXmania settings](/img/docs/gitaller/firmware-20200926/dtxmania-config.png)
+
+:::tip
+If you cannot resolve the issue, please email us. We will assist you with the upgrade.
+:::

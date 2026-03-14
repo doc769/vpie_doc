@@ -1,0 +1,200 @@
+---
+sidebar_position: 1
+sidebar_label: "NOSTROLLER Options 使用教程"
+---
+
+# NOSTROLLER Options 软件使用教程
+
+## 注意事项
+
+:::warning 可能的问题
+**不要按着 FN 不松手，插入 USB type-B，会造成产品工作不正常。**
+
+处理方式：拔掉 USB Type-B，不要碰到 FN，再次插入 USB Type-B 即可解决。
+:::
+
+:::warning 恢复出厂设置
+**恢复出厂设置后，哪些设置会被重置。**
+
+处理方式：所有的设置都会恢复默认，需要重新校准。没有特殊情况，请不要使用这个功能。
+:::
+
+## 软件下载
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.1_20230116.zip">NOSTROLLER Options V2.1</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.0_20220830.zip">NOSTROLLER Options V2.0</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/NOSTROLLER_Options_V1.8_20220816.zip">NOSTROLLER Options V1.8</a>
+</div>
+
+## 1. 如何烧录固件？
+
+<Steps>
+<Step title="打开软件并连接设备">
+
+1. 打开 NOSTROLLER options.exe
+2. 连接 NOSTROLLER 控制器到电脑上
+
+</Step>
+<Step title="拖拽固件文件">
+
+拖拽 XXX.skystar 文件到"烧录固件"区域。
+
+</Step>
+<Step title="开始升级">
+
+点击"升级"按钮，等待烧录完成。
+
+</Step>
+<Step title="完成">
+
+烧录完成后，产品会自动生效，不需要重新插拔 USB 接口。
+
+</Step>
+</Steps>
+
+## 2. 如何调节灯光颜色？
+
+![灯光颜色调节](/img/docs/nostroller/options-tutorial/zh/section2-light-color.png)
+
+1. **所有按键使用同一种颜色**：当按键按下时，灯光亮起对应的颜色
+2. **每个按键独立设置一种颜色**：当按键按下时，灯光亮起对应的颜色
+3. **每个按键独立设置两种颜色**：31 是按键未按下的灯光颜色，32 是按键按下的灯光颜色
+
+灯光的亮度取决于 HSV 中的 V，V 值越大，亮度越高，V 值越小，亮度越低。
+
+![HSV 颜色选择器](/img/docs/nostroller/options-tutorial/hsv-color-picker.png)
+
+4. **亮度建议**：
+   - 如果 Type-C 连接的是 5V 500mA 以上的供电器，建议最大亮度设置为 50-60%
+   - 如果连接的是 5V 2A 以上的供电器，无需调节最大亮度
+   - 如果觉得灯光刺眼，也可以降低最大亮度
+
+5. 本设置只在 HID 模式下，并且使用 Specietxxls 才有效
+6. 任何设置后，必须点击保存后，才能生效
+7. 导出的灯光数据，包含 ①②③ 的灯光数据，不包含 ④ 和 ⑤。导出的形式为 PNG 图片，可以通过绘图软件直接在 PNG 上修改。图片内的单个色块，不支持渐变色，只能使用单一色彩
+
+## 3. 如何调节力度？
+
+![力度调节](/img/docs/nostroller/options-tutorial/zh/section3-force-adjust.png)
+
+### 使用注意事项
+
+- 在任何模式下，可以调节全部模式的力度
+- 调节参数后，必须保存后，才能生效
+- 切换到 MIDI 或者 HID 模式下，才能看到实时效果
+
+### 参数建议
+
+1. **MIDI 调节**：建议调节范围在 30-80
+2. **HID 调节**：建议调节范围在 30-80
+3. **Keyboard 调节**：如果值过大，会导致按键触底时，没有键值输出
+4. **Controller 调节**：如果值过大，会导致按键触底时，没有键值输出
+
+## 4. 如何校准？
+
+### 校准前准备
+
+<Steps>
+<Step title="准备工具">
+
+需要一个内六角螺丝刀，型号为 H2.5。
+
+![H2.5 内六角螺丝刀](/img/docs/nostroller/options-tutorial/screwdriver.png)
+
+</Step>
+<Step title="拧下底部螺丝">
+
+将 NOSTROLLER 翻转过来，拧掉如图所示的螺丝。
+
+![底部螺丝位置](/img/docs/nostroller/options-tutorial/bottom-screws.png)
+
+</Step>
+<Step title="取出金属条">
+
+将 NOSTROLLER 的金属条取出来，备用。
+
+![取出金属条](/img/docs/nostroller/options-tutorial/metal-bar.png)
+
+</Step>
+</Steps>
+
+### 校准步骤
+
+<Steps>
+<Step title="开始校准">
+
+没有特殊情况，无需校准。以下情况才需要校准。如果符合条件，点击下一步按钮。
+
+![校准步骤 1](/img/docs/nostroller/options-tutorial/zh/calibration-step1.png)
+
+</Step>
+<Step title="继续">
+
+点击下一步。
+
+![校准步骤 2](/img/docs/nostroller/options-tutorial/zh/calibration-step2.png)
+
+</Step>
+<Step title="不要触摸按键">
+
+校准时，不要触摸任何按键。
+
+![校准步骤 3](/img/docs/nostroller/options-tutorial/zh/calibration-step3.png)
+
+</Step>
+<Step title="校准过程">
+
+等待校准过程完成。
+
+![校准步骤 4](/img/docs/nostroller/options-tutorial/zh/calibration-step4.png)
+
+</Step>
+<Step title="按压金属条">
+
+将从 NOSTROLLER 拆下来的金属长条，按压在按键上。
+
+- **按压位置**：注意和保持图片一样
+- **按压力度**：无需太大，单手按压在金属条中间，让所有按键触底
+
+![按压金属条](/img/docs/nostroller/options-tutorial/press-metal-bar.png)
+
+</Step>
+<Step title="继续校准">
+
+点击下一步。
+
+![校准步骤 6](/img/docs/nostroller/options-tutorial/zh/calibration-step6.png)
+
+</Step>
+<Step title="确认按压动作">
+
+确保自己的按压动作正确，点击下一步。
+
+![校准步骤 7](/img/docs/nostroller/options-tutorial/zh/calibration-step7.png)
+
+</Step>
+<Step title="等待完成">
+
+耐心等待进度条完成。
+
+![校准步骤 8](/img/docs/nostroller/options-tutorial/zh/calibration-step8.png)
+
+</Step>
+<Step title="校准完成">
+
+此时可以松开金属条，点击完成。
+
+![校准步骤 9](/img/docs/nostroller/options-tutorial/zh/calibration-step9.png)
+
+</Step>
+<Step title="装回金属条">
+
+可以将金属条装回 NOSTROLLER。
+
+</Step>
+</Steps>
+
+:::tip
+如有任何问题，请联系我们获取技术支持。
+:::

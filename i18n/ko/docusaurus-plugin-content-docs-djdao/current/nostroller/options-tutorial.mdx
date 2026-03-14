@@ -1,0 +1,180 @@
+---
+sidebar_position: 1
+sidebar_label: "NOSTROLLER Options 튜토리얼"
+---
+
+# NOSTROLLER Options 소프트웨어 튜토리얼
+
+## 주의사항
+
+:::warning 가능한 문제
+**FN 버튼을 누른 채로 USB Type-B를 연결하면 제품이 정상적으로 작동하지 않습니다.**
+
+해결 방법: USB Type-B를 뽑고, FN을 누르지 않은 상태에서 다시 USB Type-B를 연결하세요.
+:::
+
+:::warning 공장 초기화
+**공장 초기화 후 어떤 설정이 재설정됩니까?**
+
+해결 방법: 모든 설정이 기본값으로 복원되며, 재보정이 필요합니다. 특별한 경우가 아니면 이 기능을 사용하지 마세요.
+:::
+
+## 소프트웨어 다운로드
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.1_20230116.zip">NOSTROLLER Options V2.1</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/Nostroller_Options_V2.0_20220830.zip">NOSTROLLER Options V2.0</a>
+  <a className="button button--secondary" href="/DOWNLOAD/nostroller/NOSTROLLER_Options_V1.8_20220816.zip">NOSTROLLER Options V1.8</a>
+</div>
+
+## 1. 펌웨어 업데이트 방법
+
+<Steps>
+<Step title="소프트웨어 열기 및 장치 연결">
+
+1. NOSTROLLER options.exe를 실행합니다
+2. NOSTROLLER 컨트롤러를 컴퓨터에 연결합니다
+
+</Step>
+<Step title="펌웨어 파일 드래그">
+
+XXX.skystar 파일을 "펌웨어 업데이트" 영역으로 드래그합니다.
+
+</Step>
+<Step title="업그레이드 시작">
+
+"업그레이드" 버튼�� 클릭하고 완료될 때까지 기다립니다.
+
+</Step>
+<Step title="완료">
+
+펌웨어 업데이트가 완료되면 제품이 자동으로 적용되며, USB를 다시 연결할 필요가 없습니다.
+
+</Step>
+</Steps>
+
+## 2. 조명 색상 조정 방법
+
+1. **모든 키가 같은 색상 사용**: 키를 누르면 해당 색상으로 조명이 켜집니다
+2. **각 키마다 독립적으로 하나의 색상 설정**: 키를 누르면 해당 색상으로 조명이 켜집니다
+3. **각 키마다 독립적으로 두 가지 색상 설정**: 31은 키를 누르지 않았을 때의 조명 색상, 32는 키를 눌렀을 때의 조명 색상입니다
+
+밝기는 HSV의 V에 따라 달라집니다. V 값이 클수록 밝고, V 값이 작을수록 어둡습니다.
+
+![HSV 색상 선택기](/img/docs/nostroller/options-tutorial/hsv-color-picker.png)
+
+4. **밝기 권장사항**:
+   - Type-C가 5V 500mA 이상 전원 공급 장치에 연결된 경우, 최대 밝기를 50-60%로 설정하는 것을 권장합니다
+   - 5V 2A 이상 전원 공급 장치에 연결된 경우, 최대 밝기를 조정할 필요가 없습니다
+   - 조명이 너무 밝으면 최대 밝기를 낮출 수 있습니다
+
+5. 이 설정은 HID 모드에서 Specietxxls를 사용할 때만 유효합니다
+6. 모든 설정은 저장해야 적용됩니다
+7. 내보낸 조명 데이터에는 ①②③의 조명 데이터가 포함되며, ④와 ⑤는 포함되지 않습니다. 내보내기 형식은 PNG 이미지이며, 그림 소프트웨어로 PNG를 직접 수정할 수 있습니다. 이미지 내의 단일 색상 블록은 그라데이션을 지원하지 않으며, 단색만 사용할 수 있습니다
+
+## 3. 힘/속도 조정 방법
+
+### 사용 주의사항
+
+- 모든 모드에서 모든 모드의 힘을 조정할 수 있습니다
+- 매개변수를 조정한 후에는 저장해야 적용됩니다
+- MIDI 또는 HID 모드로 전환하여 실시간 효과를 확인하세요
+
+### 매개변수 권장사항
+
+1. **MIDI 조정**: 권장 범위 30-80
+2. **HID 조정**: 권장 범위 30-80
+3. **Keyboard 조정**: 값이 너무 크면 키를 끝까지 눌러도 출력되지 않을 수 있습니다
+4. **Controller 조정**: 값이 너무 크면 키를 끝까지 눌러도 출력되지 않을 수 있습니다
+
+## 4. 보정 방법
+
+### 준비
+
+<Steps>
+<Step title="도구 준비">
+
+육각 드라이버가 필요합니다. 모델은 H2.5입니다.
+
+![H2.5 육각 드라이버](/img/docs/nostroller/options-tutorial/screwdriver.png)
+
+</Step>
+<Step title="하단 나사 제거">
+
+NOSTROLLER를 뒤집어 그림과 같이 나사를 제거합니다.
+
+![하단 나사 위치](/img/docs/nostroller/options-tutorial/bottom-screws.png)
+
+</Step>
+<Step title="금속 바 제거">
+
+NOSTROLLER에서 금속 바를 제거하고 보관합니다.
+
+![금속 바 제거](/img/docs/nostroller/options-tutorial/metal-bar.png)
+
+</Step>
+</Steps>
+
+### 보정 단계
+
+<Steps>
+<Step title="보정 시작">
+
+정상적인 상황에서는 보정이 필요하지 않습니다. 다음 상황에서만 보정하세요. 조건이 충족되면 다음 버튼을 클릭합니다.
+
+</Step>
+<Step title="계속">
+
+다음을 클릭합니다.
+
+</Step>
+<Step title="키를 터치하지 마세요">
+
+보정 중에는 키를 터치하지 마세요.
+
+</Step>
+<Step title="보정 프로세스">
+
+보정 프로세스가 완료될 때까지 기다립니다.
+
+</Step>
+<Step title="금속 바 누르기">
+
+NOSTROLLER에서 제거한 금속 바를 키 위에 놓습니다.
+
+- **누르는 위치**: 이미지와 같이 유지하세요
+- **누르는 힘**: 너무 많은 힘이 필요하지 않으며, 한 손으로 금속 바 중앙을 눌러 모든 키가 바닥에 닿도록 합니다
+
+![금속 바 누르기](/img/docs/nostroller/options-tutorial/press-metal-bar.png)
+
+</Step>
+<Step title="보정 계속">
+
+다음을 클릭합니다.
+
+</Step>
+<Step title="누르는 동작 확인">
+
+누르는 동작이 올바른지 확인하고 다음을 클릭합니다.
+
+</Step>
+<Step title="완료 대기">
+
+진행률 표시줄이 완료될 때까지 기다립니다.
+
+</Step>
+<Step title="보정 완료">
+
+이제 금속 바를 놓고 완료를 클릭합니다.
+
+</Step>
+<Step title="금속 바 재설치">
+
+금속 바를 NOSTROLLER에 다시 설치할 수 있습니다.
+
+</Step>
+</Steps>
+
+:::tip
+질문이 있으시면 기술 지원팀에 문의하세요.
+:::

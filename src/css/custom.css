@@ -130,6 +130,13 @@ html[data-theme='dark']	.alert {
 	border-color: #272727 #272727 #272727 var(--ifm-alert-border-color);
 }
 
+/* Reserve scrollbar gutter to prevent horizontal layout shift */
+html {
+	scrollbar-gutter: stable;
+}
+
+
+
 .alert {
 	border-color: #e1e5ef #e1e5ef #e1e5ef var(--ifm-alert-border-color);
 }
@@ -329,9 +336,73 @@ aside.theme-doc-sidebar-container {
 	margin: 0;
 }
 
-details,
 blockquote {
 	margin-bottom: 1.5rem !important;
+}
+
+/* ===== FAQ / details accordion (Dyte-style) ===== */
+.markdown details {
+	border: none;
+	border-bottom: 1px solid var(--ifm-color-emphasis-300);
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
+	margin: 0 !important;
+}
+
+.markdown details:first-of-type {
+	border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.markdown details > summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.1rem 0.25rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--ifm-color-emphasis-900);
+	cursor: pointer;
+	list-style: none;
+	user-select: none;
+}
+
+/* hide default browser triangle (all browsers) */
+.markdown details > summary::-webkit-details-marker { display: none; }
+.markdown details > summary::marker { display: none; content: ''; }
+.markdown details > summary::before { display: none; }
+
+/* + / × icon on the right via pseudo-element */
+.markdown details > summary::after {
+	content: '+';
+	font-size: 1.35rem;
+	line-height: 1;
+	color: var(--ifm-color-primary);
+	flex-shrink: 0;
+	margin-left: 1rem;
+	transition: transform 0.2s ease;
+}
+
+.markdown details[open] > summary::after {
+	content: '×';
+}
+
+.markdown details > summary:hover {
+	color: var(--ifm-color-primary);
+	background: transparent;
+}
+
+/* content area */
+.markdown details > :not(summary) {
+	padding: 0 0.25rem 1.25rem;
+	margin: 0;
+}
+
+.markdown details > p:last-child,
+.markdown details > ul:last-child,
+.markdown details > ol:last-child {
+	margin-bottom: 0;
 }
 
 

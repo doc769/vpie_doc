@@ -1,0 +1,152 @@
+---
+sidebar_position: 1
+sidebar_label: "TAIKOLLER Options Tutorial"
+---
+
+# How To Use TAIKOLLER Options
+
+## 0. Download TAIKOLLER Options Software and Firmware
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/SUPPORT/TAIKOLLER-options-V2.5-20230707.zip">TAIKOLLER Options V2.5</a>
+  <a className="button button--secondary" href="/SUPPORT/TaikollerOptionsV2.4.zip">TAIKOLLER Options V2.4</a>
+</div>
+
+**V2.5 Update Notes:**
+
+1. Firmware, solve the bug that it does not work properly when connected to PS4;
+2. Firmware, solve the bug of wrong response in some specific situations;
+3. Options V2.5, solve the bug that it cannot work properly in Windows 7.
+
+## 1. What is TAIKOLLER Options
+
+TAIKOLLER Options is a software designed by DAOdesign team, which can easily adjust the parameters of TAIKOLLER. You can adjust the parameters to make TAIKOLLER more comfortable to use.
+
+## 2. How to Use
+
+### 2.1 Interface
+
+![Interface](/img/docs/taikoller/options-tutorial/en/section2-interface.png)
+
+| No. | Function Description |
+|-----|----------------------|
+| A | Pop up update firmware window |
+| B | Pop up custom picture window |
+| C | Pop up advanced settings window |
+| D | Switch between different modes |
+| E | 3 groups of different sensitivities can be saved, which is convenient for dealing with different types of drum sticks or the usage habits of friends |
+| F | Automatically generate setup images for easy posting on social media |
+| G | Clear statistical data, you can use it arbitrarily |
+| H | Restore factory settings, use with caution!!! |
+| I | Display the current tapping strength and tapping quantity. When the tapping force is less than the threshold, no statistics will be made |
+| J | Set the threshold value. It is recommended to be less than 20 |
+| K | You can drag the slider to set the threshold, the function is the same as J |
+| L | Click the right mouse button to display the language switching menu. Supports English, Japanese, Chinese. |
+
+### 2.2 Firmware
+
+<Steps>
+<Step title="Drag the firmware file">
+
+Drag the firmware `*.skystar` file to this window.
+
+![Firmware upgrade window](/img/docs/taikoller/options-tutorial/en/section2-firmware.png)
+
+</Step>
+<Step title="Click Upgrade">
+
+Click Upgrade to start the update.
+
+</Step>
+</Steps>
+
+### 2.3 Picture
+
+![Custom picture window](/img/docs/taikoller/options-tutorial/en/section2-picture.png)
+
+| No. | Function Description |
+|-----|----------------------|
+| A | Follow the instructions and drag the picture to the corresponding position |
+| B | Restore pictures to factory settings. Use with caution!!! |
+| C | You must click Save for the customized picture to take effect. |
+
+### 2.4 Advanced Settings
+
+![Advanced settings window](/img/docs/taikoller/options-tutorial/en/section2-advanced.png)
+
+The units of A～F are milliseconds (ms).
+
+| No. | Function Description |
+|-----|----------------------|
+| A | This parameter is only valid for PS4 mode. The initial value is 18ms. If there is no output for a short period of time when using PS4/5, you can increase this value. Suggested range: 18~25 |
+| B | This parameter is only valid for SWITCH mode. The initial value is 25ms. If there is no output for a short period of time during use, you can increase this value. Suggested range: 25~32 |
+| C | This parameter is only valid for CONTROLLER mode. If used in TJAplayer/Opentaiko, it is recommended to remap the keys in the software. Recommended range: 6-18 |
+| D | This parameter is only valid for Keyboard mode. If used in TJAplayer/Opentaiko, it is recommended to remap the keys in the software. Recommended range: 6-18 |
+| E | This parameter is only valid for Jiro 1P mode. If used in TJAplayer/Opentaiko, it is recommended to remap the keys in the software. Recommended range: 18-22 |
+| F | This parameter is only valid for Jiro 2P mode. If used in TJAplayer/Opentaiko, it is recommended to remap the keys in the software. Recommended range: 18-22 |
+| G | The trigger threshold required to hit the Big Blue Note 100% at the same time. If you are used to hitting big blue notes staggered, you don't have to worry about it. Recommended range: 15-20. It is recommended to increase this value if both left and right blue notes are output when one "Ka" is struck. |
+| H | The trigger threshold required to hit the Big Red Note 100% at the same time. If you are used to hitting big red notes staggered, you don't have to worry about it. Recommended range: 35-40. It is recommended to increase this value if both left and right red notes are output when one "Dong" is struck. |
+| I | After setting, you must click Save to take effect. |
+
+## 3. FAQ
+
+<details>
+<summary>What if two people are playing at the same time?</summary>
+
+- On PS4/5, Switch platform, use the corresponding mode.
+- When using TJAplayer / Opentaiko, it is recommended that Player 1 use CONTROLLER mode and Player 2 use Keyboard mode.
+- If using the Jiro 1/2 program, it is recommended that Player 1 use the Jiro 1P mode, and Player 2 use the Jiro 2P mode.
+
+</details>
+
+<details>
+<summary>Why are the key values of the controller so strange in Keyboard mode?</summary>
+
+The key value of controller in Keyboard mode is the value corresponding to the gamepad of PC XBOX. The position of the button is equivalent to the function of the corresponding position of the XBOX controller, which is easy to remember.
+
+</details>
+
+<details>
+<summary>Why set the blue big note and red big note thresholds?</summary>
+
+The value set is the threshold. This value will only take effect when the tap is 100% simultaneous (within 3 milliseconds between left and right hands).
+
+If you are used to using staggered taps to complete the big blue note or the big red note, then ignore this setting.
+
+If you use it on TJAplayer / Opentaiko, it is recommended to set it to 254, which can limit the double reaction of the same color to the greatest extent (when you hit "Dong", output 2 "Dong" at the same time; when you hit "Ka", output 2 "Ka" at the same time).
+
+</details>
+
+<details>
+<summary>What is the unit of hold time and why should this setting be enabled?</summary>
+
+The unit of hold time is millisecond (ms).
+
+- If the value is too large, it will reduce the high-speed combo.
+- If the value is too small, on the corresponding host platform, there may be occasional tapping without output. Usually there will be no response to tapping for 0.5~1 second, and then it will return to normal.
+
+We have gone through a lot of testing, but the test results fluctuate in a small range. In order to make it easier for players to find the limit value that suits them, we decided to open this setting.
+
+</details>
+
+<details>
+<summary>The logic of hold time setting</summary>
+
+For TJAplayer / Opentaiko, the theoretical support minimum is 2ms. But we recommend setting it above 6ms.
+
+- At 6ms, the number of yellow bar rolling output will be more than that of the arcade machine (120Hz version). This value is suitable for players who are chasing extreme scores.
+- At 12-16ms, the number of yellow bar rolling output is basically the same as that of the arcade machine (120Hz version). We will update the specific value based on feedback from more professional players.
+
+</details>
+
+<details>
+<summary>What is the difference between Jiro 1P, Jiro 2P and Keyboard mode?</summary>
+
+All three modes are keyboard modes. The difference is:
+
+- The key values of the controller in Jiro 1P and Jiro 2P modes are specially optimized for Jiro software, which is convenient to use the controller for operation. PS: Jiro 2P mode is for the convenience of 2 TAIKOLLERs working on Jiro software at the same time.
+- The keyboard mode is specially optimized for PC XBOX games for the key value of the controller, which is convenient to operate with the controller.
+
+If you use TJAplayer / Opentaiko, these 3 modes are all available.
+
+</details>

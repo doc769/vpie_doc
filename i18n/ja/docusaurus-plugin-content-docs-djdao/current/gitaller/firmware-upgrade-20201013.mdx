@@ -1,0 +1,97 @@
+---
+sidebar_position: 2
+sidebar_label: "GITALLERファームウェアアップグレードチュートリアル20201013"
+---
+
+# GITALLERファームウェアアップグレードチュートリアル20201013
+
+## ファームウェアダウンロード
+
+<div style={{marginBottom: '1.5rem'}}>
+  <a className="button button--primary button--lg" href="https://www.dj-dao.com/firmware/Guitar_firmware_20201013.zip">ファームウェアダウンロード</a>
+</div>
+
+:::tip
+完全に解凍してから使用してください。圧縮パッケージ内で直接実行しないでください。
+:::
+
+## ファームウェアアップグレードチュートリアル
+
+<Steps>
+<Step title="ファームウェアの圧縮パッケージを解凍">
+
+ダウンロードしたファームウェアの圧縮パッケージをローカルフォルダーに解凍します。
+
+</Step>
+<Step title="USBが未接続であることを確認">
+
+GITALLER の USB ポートが PC に接続されていないことを確認します。
+
+</Step>
+<Step title="ファームウェアアップグレードモードに入る">
+
+手を放さずに START + SELECT ボタンを同時に押します。GITALLER の USB ポートを PC に挿入します。USB を PC に接続したら、START + SELECT ボタンを放してください。
+
+![START + SELECTを押す](/img/docs/gitaller/firmware-20201013/step3-buttons.png)
+
+![USBを挿入](/img/docs/gitaller/firmware-20201013/step3-usb.png)
+
+</Step>
+<Step title="ファームウェアアップグレードプログラムを開く">
+
+`GITALLER_firmware_APP.exe` プログラムを開きます。
+
+![プログラムを開く](/img/docs/gitaller/firmware-20201013/step4-app.png)
+
+</Step>
+<Step title="ファームウェアファイルを読み込む">
+
+**LoadFile** ボタンをクリックし、ダウンロードしたファームウェアフォルダーを見つけて、`GITALLER_firmware_V1.1_20201013_Sensitivity_14.bin` を選択します。
+
+Sensitivity_12 は最低の感度、Sensitivity_15 は最高の感度、Sensitivity_14 ファームウェアの使用をお勧めします。
+
+![LoadFileをクリック](/img/docs/gitaller/firmware-20201013/step5-loadfile.png)
+
+![ファームウェアファイルを選択](/img/docs/gitaller/firmware-20201013/step6-select-bin.png)
+
+</Step>
+<Step title="アップグレード開始">
+
+**Start** ボタンをクリックして、ファームウェアのアップグレードを開始します。進行状況バーが完了するのを待ちます。
+
+![Startをクリック](/img/docs/gitaller/firmware-20201013/step7-start.png)
+
+![進行状況バーを待つ](/img/docs/gitaller/firmware-20201013/step8-progress.png)
+
+</Step>
+<Step title="アップグレード完了">
+
+成功後、**GITALLER USB インターフェースを再接続します**（重要）。
+
+![アップグレード成功](/img/docs/gitaller/firmware-20201013/step9-success.png)
+
+:::warning
+成功しない場合は、ステップ 3 から操作を再度行ってください。
+:::
+
+</Step>
+</Steps>
+
+## 解決された問題
+
+1. ピック使用時に発生する可能性のある多重反応を解消
+2. wailing 用の 4 つの感度ファームウェアを提供
+
+## ボタン設定参照
+
+### GITADORA trial の設定
+
+GITADORA trial では、第 1 ボタンは 0、wailing_up は 10、wailing_down は 11 と表示されます。
+
+![GITADORA trial設定](/img/docs/gitaller/firmware-20201013/gitadora-trial-config.png)
+
+### DTXmania の設定
+
+DTXmania では、第 1 ボタンは 1、wailing_up は 11、wailing_down は 12 と表示されます。
+
+![DTXmania設定](/img/docs/gitaller/firmware-20201013/dtxmania-config.png)

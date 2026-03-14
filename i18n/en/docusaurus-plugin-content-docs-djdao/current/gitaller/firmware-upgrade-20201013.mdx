@@ -1,0 +1,97 @@
+---
+sidebar_position: 2
+sidebar_label: "GITALLER firmware update Guide 20201013"
+---
+
+# GITALLER firmware update Guide 20201013
+
+## Download firmware
+
+<div style={{marginBottom: '1.5rem'}}>
+  <a className="button button--primary button--lg" href="https://www.dj-dao.com/firmware/Guitar_firmware_20201013.zip">Download firmware</a>
+</div>
+
+:::tip
+Please fully uncompress the file before use. Do not run it directly from the archive.
+:::
+
+## Firmware upgrade tutorial
+
+<Steps>
+<Step title="Uncompress the firmware archive">
+
+Uncompress the downloaded firmware archive to a local folder.
+
+</Step>
+<Step title="Confirm USB is unplugged">
+
+Confirm your GITALLER USB cable is unplugged from PC.
+
+</Step>
+<Step title="Enter firmware upgrade mode">
+
+Push START + SELECT buttons at the same time, do not release. Plug GITALLER USB cable to PC with your other hand. Then release the START + SELECT buttons.
+
+![Push START + SELECT](/img/docs/gitaller/firmware-20201013/step3-buttons.png)
+
+![Plug in USB](/img/docs/gitaller/firmware-20201013/step3-usb.png)
+
+</Step>
+<Step title="Open firmware upgrade program">
+
+Open `GITALLER_firmware_APP.exe`.
+
+![Open program](/img/docs/gitaller/firmware-20201013/step4-app.png)
+
+</Step>
+<Step title="Load firmware file">
+
+Click the **LoadFile** button, find your downloaded firmware folder, select `GITALLER_firmware_V1.1_20201013_Sensitivity_14.bin`.
+
+The suffix Sensitivity_12 means lower sensitivity, Sensitivity_15 means higher sensitivity. We recommend Sensitivity_14 firmware.
+
+![Click LoadFile](/img/docs/gitaller/firmware-20201013/step5-loadfile.png)
+
+![Select firmware file](/img/docs/gitaller/firmware-20201013/step6-select-bin.png)
+
+</Step>
+<Step title="Start upgrade">
+
+Click the **Start** button to begin updating. Wait for the progress bar to complete.
+
+![Click Start](/img/docs/gitaller/firmware-20201013/step7-start.png)
+
+![Wait for progress bar](/img/docs/gitaller/firmware-20201013/step8-progress.png)
+
+</Step>
+<Step title="Upgrade complete">
+
+After success, **replug your GITALLER USB cable** (very important).
+
+![Upgrade successful](/img/docs/gitaller/firmware-20201013/step9-success.png)
+
+:::warning
+If not successful, please retry from step 3.
+:::
+
+</Step>
+</Steps>
+
+## Problems solved
+
+1. Cleared the misfire problem when you pick up or pick down
+2. Provides 4 sensitivity firmwares for wailing
+
+## Button configuration reference
+
+### GITADORA trial settings
+
+In GITADORA trial, the first button shows as 0, wailing_up shows as 10, wailing_down shows as 11.
+
+![GITADORA trial settings](/img/docs/gitaller/firmware-20201013/gitadora-trial-config.png)
+
+### DTXmania settings
+
+In DTXmania, the first button shows as 1, wailing_up shows as 11, wailing_down shows as 12.
+
+![DTXmania settings](/img/docs/gitaller/firmware-20201013/dtxmania-config.png)

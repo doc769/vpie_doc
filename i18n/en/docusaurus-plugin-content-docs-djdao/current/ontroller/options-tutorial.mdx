@@ -1,0 +1,96 @@
+---
+sidebar_position: 2
+sidebar_label: "ONTROLLER Options Tutorial"
+---
+
+# How to Use ONTROLLER Options
+
+## 0. Download ONTROLLER Options Software and Firmware
+
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/SUPPORT/ONTROLLER-options-V1.8-20231116.zip">ONTROLLER Options V1.8</a>
+</div>
+
+**Upgrade content:**
+
+1. V35 firmware included;
+2. The factory firmware is V35 firmware;
+
+## 1. What is ONTROLLER Options
+
+ONTROLLER Options is a software designed by the DAO design team that can easily adjust the parameters of ONTROLLER. You can adjust the parameters to make ONTROLLER more comfortable to use.
+
+## 2. How to Use
+
+### 2.1 Beginning
+
+1. Connect the USB type-b cable, one port to the ONTROLLER, and the other port to the computer USB port (USB 3.0 port recommended).
+2. The Type-c interface can be connected or not. (If using LHS7F2 microswitch, the Type-c interface must be connected).
+3. Download the latest version of ONTROLLER Options.
+4. Unzip the package and confirm the following files:
+   - `languagepack.xml` (This is the language file)
+   - `ONTROLLER-Options-XXX.exe` (This is the software)
+   - `SS530_ONG_APP_RC_VXXX.bin` (This is the factory firmware)
+
+### 2.2 How to Update Firmware
+
+1. Click the "Open" button;
+2. Find the `SS530_ONG_APP_RC_VXXX.bin` file in the directory;
+3. Click the "Update" button;
+
+### 2.3 Mode Description
+
+![Mode description](/img/docs/ontroller/options-tutorial/en/section2-3-mode.png)
+
+| No. | Function Description |
+|-----|---------------------|
+| A | Mode selection drop-down list |
+| B | Click the button to switch modes |
+
+### 2.4 Lever Calibration
+
+The lever is calibrated at the factory.
+
+If the lever is abnormal or you disassemble the lever yourself, it is recommended to recalibrate it.
+
+![Lever calibration](/img/docs/ontroller/options-tutorial/en/section2-4-calibration.png)
+
+| No. | Function Description |
+|-----|---------------------|
+| A | Button calibration |
+| B | Calibration method |
+| C | After calibration is completed, click to exit |
+| D | Feedback of current lever output |
+
+### 2.5 Global Function Description
+
+![Global functions](/img/docs/ontroller/options-tutorial/en/section2-5-global.png)
+
+| No. | Function Description |
+|-----|---------------------|
+| A | Support for HID Output lighting, it is recommended to turn it on |
+| B | Simulate incandescent light effect |
+| C | Brightness of side buttons |
+| D | Brightness of 6 square button lights |
+| E | Set the lighting mode of the side buttons |
+| F | Set the lighting mode of 6 square button lights |
+| G | Click continuously to switch between RGBW to confirm that all lights are normal |
+| H | Switch the UI language. If you want to use other languages, you can modify the XML file yourself |
+
+### 2.6 Functions in Keyboard Mode
+
+All keys of ONTROLLER can be customized with keyboard values, light color when the button is pressed, and light color when the button is released.
+
+When mapping key values, center the lever. Otherwise, it will be mapped to the left or right of the lever.
+
+If you want the light not to light up when the button is not pressed, you can set it to black RGB (0,0,0).
+
+![Keyboard mode](/img/docs/ontroller/options-tutorial/en/section2-6-keyboard.png)
+
+| No. | Function Description |
+|-----|---------------------|
+| A | Display the current key value, the default value is Shift |
+| B | The key value for moving the lever to the left, the default value is Left |
+| C | The key value for moving the lever to the right, the default value is Right |
+| D | It is recommended not to set the dead zone between Left and Right too small, as it will easily jitter between Left and Right |
+| E | The color of the outer frame is the color of the light when the current button is released |
