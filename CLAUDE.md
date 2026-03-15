@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Nanos World documentation site built with **Docusaurus 3.9.2** and **React 19**. Written in TypeScript. Deployed to GitHub Pages at https://docs.vpietc.com.
+GAMO2 & DJDAO product documentation site built with **Docusaurus 3.9.2** and **React 19**. Written in TypeScript. Deployed to GitHub Pages at https://docs.vpietc.com.
 
 GitHub repo: `doc769/vpie_doc`
 
@@ -39,9 +39,24 @@ The site uses **3 docs instances** via Docusaurus multi-instance plugin:
 
 The default instance serves the root (`routeBasePath: '/'`) as a product selection landing page. DJDAO and GAMO2 are separate plugin instances registered in `docusaurus.config.ts` under `plugins`.
 
+### Content Structure
+
+**GAMO2** (`docs-gamo2/`):
+- `phoenixwan/` — PHOENIXWAN tutorials (replace panel, PCB upgrade, audio mesh, LMT damping)
+- `k28/` — K28 firmware guides (V39, V40)
+- `faucetwo-portable/` — FAUCETWO Portable (replace encoder with Steps, F2PE Options guide)
+- `be2ps/` — BE2PS firmware guides (V12, V18)
+- `faucetwo.md`, `be2bt.md` — placeholder pages
+
+**DJDAO** (`docs-djdao/`):
+- `taikoller/` — TAIKOLLER Options tutorial (Steps + FaqAccordion)
+- `tasoller-plus/` — TASOLLER PLUS tutorials
+- `gitaller/`, `divaller/`, `eztoller5/`, `nostroller/`, `ontroller/`, `redlms/` — product subdirectories
+- `ezmax-plus.md`, `popoller.md` — single-page entries
+
 ### Sidebar Wrapper
 
-A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) wraps the default sidebar in a `div.sidebarWrapper` for styling purposes. It is a simple CSS wrapper with no tab switcher logic.
+A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) wraps the default sidebar in a `div.sidebarWrapper` for styling purposes. It is a simple CSS wrapper with `overflow-y: auto; overflow-x: hidden` — no tab switcher logic.
 
 ### Navbar
 
@@ -57,7 +72,12 @@ A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) wraps the def
   - `docusaurus-plugin-content-docs/` — main instance
   - `docusaurus-plugin-content-docs-djdao/` — DJDAO instance
   - `docusaurus-plugin-content-docs-gamo2/` — GAMO2 instance
-- Crowdin integration for community translations (nanos-world-docs project)
+- **Korean (`ko`) is translated from English**, not from Chinese
+- When adding new docs, always create all 4 locale versions
+
+### Content Migration (from WordPress SQL)
+
+Source data: WordPress `wp_posts` table exported as SQL. Each article has separate rows per locale (ZH/EN/JA), identified by `post_name` slug and `'ht_kb'` post type.
 
 ### Styling
 
@@ -73,11 +93,15 @@ A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) wraps the def
 ### Key Components
 
 - `src/components/ReferenceLink.tsx` — link card component that auto-resolves paths relative to the active docs plugin instance via `useActivePlugin`
-- `src/theme/DocSidebar/index.tsx` — simple CSS wrapper div around the default DocSidebar (no tab switcher logic)
+- `src/components/Steps.tsx` / `Steps.module.css` — numbered step component used in tutorials
+- `src/components/FaqAccordion.tsx` / `FaqAccordion.module.css` — collapsible FAQ component
+- `src/theme/DocSidebar/index.tsx` — simple CSS wrapper div around the default DocSidebar
+- `src/theme/MDXComponents.ts` — globally registers `Steps`, `Step`, `FaqAccordion`, `FaqItem`, `ReferenceLink` for use in MDX without imports
 
 ### Static Assets
 
-- `/static/img/docs/` — documentation images (webp format)
+- `/static/img/docs/gamo2/` — GAMO2 documentation images (png)
+- `/static/img/docs/` — other documentation images
 - `/static/img/social/` — social media icons (Discord, Twitter, GitHub, etc.)
 - `/static/img/sidebar/` — sidebar icons (welcome, contributing, start, explore, concepts)
 
@@ -95,3 +119,11 @@ A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) wraps the def
 - For cross-instance links, use **absolute paths** (e.g., `/djdao`, `/gamo2`)
 - In `<a>` JSX tags, always use absolute paths with the instance prefix (e.g., `/djdao/getting-started/...`)
 - `ReferenceLink` component handles path resolution automatically — pass paths relative to the instance root
+
+### Download Button Convention
+
+Use `<a className="button button--primary" href="...">` for all firmware/software download links. Do **not** use markdown `[text](url)` links for downloads.
+
+### Step-by-Step Tutorial Convention
+
+Use `<Steps>` / `<Step title="...">` components (registered globally) for any sequential how-to procedures. These are available in `.mdx` files without importing.
