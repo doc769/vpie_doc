@@ -39,9 +39,9 @@ The site uses **3 docs instances** via Docusaurus multi-instance plugin:
 
 The default instance serves the root (`routeBasePath: '/'`) as a product selection landing page. DJDAO and GAMO2 are separate plugin instances registered in `docusaurus.config.ts` under `plugins`.
 
-### Sidebar Topic Switcher
+### Sidebar Wrapper
 
-A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) adds DJDAO/GAMO2 tab switcher at the top of the sidebar. It only appears on `/djdao` and `/gamo2` routes.
+A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) wraps the default sidebar in a `div.sidebarWrapper` for styling purposes. It is a simple CSS wrapper with no tab switcher logic.
 
 ### Navbar
 
@@ -73,7 +73,7 @@ A swizzled `DocSidebar` wrapper (`src/theme/DocSidebar/index.tsx`) adds DJDAO/GA
 ### Key Components
 
 - `src/components/ReferenceLink.tsx` — link card component that auto-resolves paths relative to the active docs plugin instance via `useActivePlugin`
-- `src/theme/DocSidebar/index.tsx` — sidebar wrapper with DJDAO/GAMO2 topic switcher tabs
+- `src/theme/DocSidebar/index.tsx` — simple CSS wrapper div around the default DocSidebar (no tab switcher logic)
 
 ### Static Assets
 

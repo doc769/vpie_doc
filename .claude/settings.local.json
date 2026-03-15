@@ -229,7 +229,23 @@
       "Bash(python3 << 'EOF'\nimport re\n\nwith open\\('/Users/hbsion/Downloads/divaller.sql', 'r', encoding='utf-8', errors='ignore'\\) as f:\n    content = f.read\\(\\)\n\n# Find the INSERT block for iaeweb_diy_article\nidx = content.find\\('INSERT INTO `iaeweb_diy_article`'\\)\nif idx == -1:\n    print\\(\"No INSERT found\"\\)\nelse:\n    chunk = content[idx:idx+100]\n    print\\(\"Found at\", idx\\)\n    print\\(chunk\\)\nEOF)",
       "Bash(python3 << 'EOF'\nimport re\n\nwith open\\('/Users/hbsion/Downloads/divaller.sql', 'r', encoding='utf-8', errors='ignore'\\) as f:\n    content = f.read\\(\\)\n\n# Find INSERT for redlms\nidx = content.find\\(\"INSERT INTO `iaeweb_diy_redlms`\"\\)\nprint\\(\"Found at:\", idx\\)\n# Print 500 chars to see structure\nprint\\(content[idx:idx+500]\\)\nEOF)",
       "Bash(python3 << 'EOF'\nimport re\n\nwith open\\('/Users/hbsion/Downloads/divaller.sql', 'r', encoding='utf-8', errors='ignore'\\) as f:\n    content = f.read\\(\\)\n\nidx = content.find\\(\"INSERT INTO `iaeweb_content_support`\"\\)\nprint\\(\"Found at:\", idx\\)\nprint\\(content[idx:idx+500]\\)\nEOF)",
-      "Bash(python3 << 'EOF'\nimport re, html\n\nwith open\\('/Users/hbsion/Downloads/divaller.sql', 'r', encoding='utf-8', errors='ignore'\\) as f:\n    content = f.read\\(\\)\n\nidx = content.find\\(\"INSERT INTO `iaeweb_content_support`\"\\)\nblock_end = content.find\\(\";\\\\n\\\\n\", idx\\)\nblock = content[idx:block_end+2]\n\n# Extract row id=23 - parse carefully\n# Fields: id, catid, content\\(cn\\), title_en, title_jp, content_en, content_jp, product, title_kr, content_kr\n# Find the row starting with \\(23,\nrow_match = re.search\\(r'\\\\n\\\\\\(23,', block\\)\nif row_match:\n    start = row_match.start\\(\\)\n    # Get a large chunk to capture full row\n    chunk = block[start:start+200000]\n    print\\(\"Row starts at:\", start\\)\n    print\\(\"First 300 chars:\"\\)\n    print\\(chunk[:300]\\)\nEOF)"
+      "Bash(python3 << 'EOF'\nimport re, html\n\nwith open\\('/Users/hbsion/Downloads/divaller.sql', 'r', encoding='utf-8', errors='ignore'\\) as f:\n    content = f.read\\(\\)\n\nidx = content.find\\(\"INSERT INTO `iaeweb_content_support`\"\\)\nblock_end = content.find\\(\";\\\\n\\\\n\", idx\\)\nblock = content[idx:block_end+2]\n\n# Extract row id=23 - parse carefully\n# Fields: id, catid, content\\(cn\\), title_en, title_jp, content_en, content_jp, product, title_kr, content_kr\n# Find the row starting with \\(23,\nrow_match = re.search\\(r'\\\\n\\\\\\(23,', block\\)\nif row_match:\n    start = row_match.start\\(\\)\n    # Get a large chunk to capture full row\n    chunk = block[start:start+200000]\n    print\\(\"Row starts at:\", start\\)\n    print\\(\"First 300 chars:\"\\)\n    print\\(chunk[:300]\\)\nEOF)",
+      "Bash(ls -la /Users/hbsion/zhixi/docusaurus/my-website/i18n/*/docusaurus-plugin-content-docs-djdao/ 2>/dev/null | head -100)",
+      "Bash(find /Users/hbsion/zhixi/docusaurus/my-website/i18n/*/docusaurus-plugin-content-docs-djdao -type f 2>/dev/null | head -50)",
+      "Bash(do)",
+      "Bash(echo \"=== $locale tasoller ===\")",
+      "Read(//Users/hbsion/zhixi/docusaurus/my-website/i18n/$locale/docusaurus-plugin-content-docs-djdao/current/**)",
+      "Bash(echo \"=== $locale tasoller-plus.md ===\")",
+      "Bash(ls /Users/hbsion/zhixi/docusaurus/my-website/docs-djdao/tasoller* 2>/dev/null; ls /Users/hbsion/zhixi/docusaurus/my-website/docs-djdao/tasoller/ 2>/dev/null)",
+      "Bash(for dir:*)",
+      "Read(//Users/hbsion/zhixi/docusaurus/my-website/docs-djdao/$dir/**)",
+      "Bash(find /Users/hbsion/zhixi/docusaurus/my-website/node_modules/infima -name \"*.css\" 2>/dev/null | head -5)",
+      "Bash(python3:*)",
+      "WebFetch(domain:support.gamo2.com)",
+      "Bash(wc:*)",
+      "Bash(find:*)",
+      "Bash(cd:*)",
+      "Bash(curl:*)"
     ]
   }
 }

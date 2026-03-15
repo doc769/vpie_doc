@@ -318,7 +318,7 @@ article p img {
 
 /* Sidebar */
 .menu {
-	padding-top: 2rem !important;
+	padding-top: 0.5rem !important;
 	padding-bottom: 5rem !important;
 	font-size: .875rem;
 }

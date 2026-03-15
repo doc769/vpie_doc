@@ -1,28 +1,24 @@
-.topicSwitcher {
-  display: flex;
-  gap: 0;
-  padding: 0.75rem 1rem 0;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-}
+@media (min-width: 997px) {
+  /* Only apply sticky wrapper behavior on desktop */
+  .sidebarWrapper {
+    position: sticky;
+    top: var(--ifm-navbar-height);
+    height: calc(100vh - var(--ifm-navbar-height));
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Use stable background to prevent transparency issues */
+    background-color: var(--ifm-background-color);
+  }
 
-.topicTab {
-  flex: 1;
-  text-align: center;
-  padding: 0.5rem 0.75rem;
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: var(--ifm-color-emphasis-600);
-  border-bottom: 2px solid transparent;
-  text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.topicTab:hover {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-
-.active {
-  color: var(--ifm-color-primary);
-  border-bottom-color: var(--ifm-color-primary);
+  /* Reset inner sidebar styles so wrapper handles layout */
+  .sidebarWrapper :global(.theme-doc-sidebar-container) {
+    position: static !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    overflow: visible !important;
+    border-right: none !important;
+    max-height: none !important;
+  }
 }

@@ -1,0 +1,85 @@
+---
+sidebar_position: 1
+sidebar_label: "K28 固件升级 V39 2021年6月7日"
+---
+
+# K28 固件升级 V39 2021年6月7日
+
+## 1. 简介
+
+1. 优化PlayStation4，Switch，PC的传输算法；
+2. 增加 2 个 Switch 自定义布局，通过组合键 **B44+B17**，**B44+B18** 进入设置。
+3. 在1个Switch下，同时可以连接2个K28键盘；
+4. 为 Steam 增加 2 个自定义布局，可以作为 PlayStation4 手柄支持。通过组合键 **B44+B13，B44+B14** 进入设置。
+   - 自定义布局为空，需要自定义全部键值，请根据自己喜欢的游戏进行定制。
+   - 在设置部分，需要打开对PlayStation Configuration支持。
+5. 在keyboard layout下，上报率改为 **1ms**；
+6. 优化LED灯光算法，解决IC过热导致上报率偶尔不稳定；
+7. 提供2个版本固件。
+   - PlayStation4 上报速率 **1ms**，Switch上报速率1ms（这个上报率是主机的极限，可能会造成按键漏键，仅仅是可能，目前我们测试过程中，并没有发现，如果你发现了，请刷新4ms版本的固件。如果依然有漏键，请通过邮件联系我们）
+   - PlayStation4 上报速率 **4ms**，Switch上报速率4ms（稳定）
+8. 优化了对音频的支持。
+
+---
+
+## 2. 固件下载
+
+<a className="button button--primary" href="https://support.gamo2.com/wp-content/uploads/2020/11/K28_firmware_V39_20210607.zip">点击下载固件</a>
+
+| 固件名称 | 备注 |
+|---|---|
+| K28_HOST_MCU_V39_4ms.bin | **建议使用这个固件**，*PlayStation4和Switch上报速率4ms，Keyboard Layout上报速率1ms。* |
+| K28_HOST_MCU_V39_1ms.bin | *PlayStation4和Switch上报速率1ms，Keyboard Layout上报速率1ms。* 可以尝试这个固件，如果在PS4效果不好，请刷回4ms版本。 |
+
+---
+
+## 3. 升级教程
+
+1. 拔掉连接 K28 USB-C 线缆，按下 **B42 + B44** 不松手，插入USB-C接口，**2秒后，松开 B42 和 B44**。
+2. 解压缩固件压缩包。打开 Update V1.1.exe 文件，点击 **Connect**。如果 **Connect 变绿**，代表连接成功。否则，请重复动作1。
+3. 点击 **Open files 按钮**，选择要升级的固件文件 xxxx.bin
+4. 点击 **Update 按钮**
+5. 等待进度条完成，**重新插拔 K28 USB-C 线缆**。
+6. 完成升级。
+
+---
+
+## 4. Q&A
+
+<FaqAccordion>
+<FaqItem question="刷新固件，需要注意哪些地方？">
+
+按下组合键后，再插入USB接口。插入USB后，保持2秒左右，再松开组合键。Windows需要一定的时间反应。否则会造成无法连接K28设备。
+
+</FaqItem>
+<FaqItem question="我可以跳过之前的固件，直接升级这个固件吗？">
+
+可以。这个固件具备之前固件所有的功能。
+
+</FaqItem>
+<FaqItem question="刷固件提示出错怎么办？">
+
+可能由于USB接口接触不良，造成传输数据出错。重新刷一遍固件即可。
+
+</FaqItem>
+<FaqItem question="我不喜欢目前这个固件，可以刷回之前的版本吗？">
+
+当然可以，点击下载固件，20200221.zip
+
+</FaqItem>
+<FaqItem question="如何自定义自己的布局？">
+
+请仔细看说明书。通常我们建议：①先在白纸上画出来自己想要的布局；②使用组合键，进入想要自定义布局的编号；③设置每个按键的键值；④保存。
+
+</FaqItem>
+<FaqItem question="为什么点击Connect时，提示invalid ID？">
+
+请不要删除 Config.ini 文件，如果不小心删除了，请重新下载固件升级包，重新解压缩即可。
+
+</FaqItem>
+<FaqItem question="在Steam上，如何使用PlayStation支持？">
+
+如果游戏支持PlayStation手柄，请使用K28 Steam 的任意布局。
+
+</FaqItem>
+</FaqAccordion>

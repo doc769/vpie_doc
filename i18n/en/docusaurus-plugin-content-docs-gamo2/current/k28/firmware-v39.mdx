@@ -1,0 +1,80 @@
+---
+sidebar_position: 1
+sidebar_label: "K28 firmware V39 20210607"
+---
+
+# K28 firmware V39 20210607
+
+## 1. Upgrade content
+
+1. Optimize the transmission algorithm of PlayStation4, Switch and PC;
+2. Add 2 Switch custom layouts, enter the settings through the combination key **B44+B17**, **B44+B18**.
+3. Under 1 Switch, two K28 can be connected at the same time;
+4. Add 2 custom layouts to Steam, which can be supported as PlayStation DS4. Enter the settings through the combination key **B44+B13**, **B44+B14**.
+   - The custom layout is empty, you need to customize all the key values, please customize according to your favorite game.
+   - In the settings section, you need to turn on support for PlayStation DS4 Configuration.
+5. For **keyboard layout**, the reporting rate is changed to **1ms**;
+6. Optimize the LED lighting algorithm to solve the occasional unstable reporting rate caused by IC overheating;
+7. Provide 2 firmware versions.
+   - The reporting rate of **PlayStation4 is 1ms**, and the reporting rate of **Switch is 1ms** (this speed is the limit of the console, which may cause key leakage, but it is only possible. We have not found it during our testing. If you find it, please use the 4ms version firmware. If there are still missing keys, please contact us by email)
+   - **PlayStation4 report rate is 4ms, Switch report rate is 4ms** (DUALSHOCK 4 and Switch pro Controller report rate is stable)
+8. Optimize support for audio.
+
+---
+
+## 2. Firmware Download
+
+<a className="button button--primary" href="https://support.gamo2.com/wp-content/uploads/2020/11/K28_firmware_V39_20210607.zip">Download firmware</a>
+
+| Firmware | Comment |
+|---|---|
+| K28_HOST_MCU_V39_4ms.bin | **Recommend this**. Playstation 4 and Switch use 4ms report, keyboard layout 1ms report. |
+| K28_HOST_MCU_V39_1ms.bin | Playstation 4 and Switch use 1ms report, keyboard layout 1ms report. You can try this, if work not well, please use 4ms firmware. |
+
+---
+
+## 3. How to update
+
+1. Unplug USB of K28, push **B42+B44** at same time and **hold them**, plug USB of K28. After **2 seconds**, release B42+B44.
+2. Unzip the package. Open **Update V1.1.exe** file, click connect button. If connect button is **green**, the connection of K28 is OK. If not, please retry action 1.
+3. Click **Open files** button, select the target firmware file **xxxx.bin**.
+4. Click the **Update button**.
+5. Waiting for the progress bar to finish. **Replug** the USB of K28.
+6. Done.
+
+---
+
+## 4. Q&A
+
+<FaqAccordion>
+<FaqItem question="What should I pay attention to when flashing the firmware?">
+
+After pressing the key combination, plug the USB-C cable to K28. Hold the keys for about 2 seconds, and then release them. Windows needs some time to react. Otherwise, the K28 device cannot be connected.
+
+</FaqItem>
+<FaqItem question="Can I skip the previous firmware and upgrade this firmware directly?">
+
+Yes. This firmware has all the functions of the previous firmware.
+
+</FaqItem>
+<FaqItem question="What should I do if there is an error when flashing the firmware?">
+
+Poor contact of the USB interface may cause data transmission errors. Flash the firmware again.
+
+</FaqItem>
+<FaqItem question="I don't like the current firmware, can I flash back to the previous version?">
+
+Of course, click to download the firmware, 20200221.zip
+
+</FaqItem>
+<FaqItem question="How to customize your own layout?">
+
+Please read the instructions carefully. Usually we recommend: ①Draw the layout you want on the white paper; ②Use the combination key to enter the number you want to customize the layout; ③Set the key value of each button; ④Save.
+
+</FaqItem>
+<FaqItem question="Why does it prompt invalid ID when I click Connect?">
+
+Please do not delete the Config.ini file. If you delete it accidentally, please download the firmware upgrade package again and unzip it again.
+
+</FaqItem>
+</FaqAccordion>

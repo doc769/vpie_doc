@@ -1,0 +1,85 @@
+---
+sidebar_position: 2
+sidebar_label: "K28 固件升级 V40 2022年6月28日"
+---
+
+# K28 固件升级 V40 2022年6月28日
+
+## 1 简介
+
+此固件，包含固件V39所有功能。
+
+1. 解决在键盘模式下（B11、B12布局）使用3.5mm音频接口时，出现按键多重反应的bug。
+2. 在键盘模式下（B11、B12布局），优化有效上报率，可以持续保持在1ms左右；
+3. 增加B12布局。B14和B15按键都为Space键值，适合7键类型游戏。
+4. 优化LED灯光效果。
+
+---
+
+## 2 固件下载
+
+<a className="button button--primary" href="https://support.gamo2.com/wp-content/uploads/2022/07/K28_firmware_20220628.zip">点击下载固件</a>
+
+---
+
+## 3 固件烧录教程
+
+### 3.1 HOST 教程
+
+1. 拔掉连接 K28 USB-C 线缆，按下 **B42 + B44** 不松手，插入USB-C接口，**2秒后，松开 B42 和 B44**。
+2. 解压缩固件压缩包。打开 Update V1.1.exe 文件，点击 **Connect**。如果 **Connect 变绿**，代表连接成功。否则，请重复动作1。
+3. 点击 **Open files 按钮**，选择要升级的固件文件 **HOST_xxxx.bin**
+4. 点击 **Update 按钮**
+5. 等待进度条完成，**重新插拔 K28 USB-C 线缆**。
+6. 完成升级。
+
+### 3.2 LED 教程
+
+1. 拔掉连接 K28 USB-C 线缆，按下 **B41 + B43** 不松手，插入USB-C接口，**5秒后，松开 B41 和 B43**。
+2. 解压缩固件压缩包。打开 Update V1.1.exe 文件，点击 **Connect**。如果 **Connect 变绿**，代表连接成功。否则，请重复动作1。
+3. 点击 **Open files 按钮**，选择要升级的固件文件 **LED_xxxx.bin**
+4. 点击 **Update 按钮**
+5. 等待进度条完成，**重新插拔 K28 USB-C 线缆**。
+6. 完成升级。
+
+---
+
+## 4 Q&A
+
+<FaqAccordion>
+<FaqItem question="刷新固件，需要注意哪些地方？">
+
+按下组合键后，再插入USB接口。插入USB后，保持2秒左右，再松开组合键。Windows需要一定的时间反应。否则会造成无法连接K28设备。
+
+</FaqItem>
+<FaqItem question="我可以跳过之前的固件，直接升级这个固件吗？">
+
+可以。这个固件具备之前固件所有的功能。
+
+</FaqItem>
+<FaqItem question="刷固件提示出错怎么办？">
+
+可能由于USB接口接触不良，造成传输数据出错。重新刷一遍固件即可。
+
+</FaqItem>
+<FaqItem question="我不喜欢目前这个固件，可以刷回之前的版本吗？">
+
+当然可以，点击下载固件，20200221.zip
+
+</FaqItem>
+<FaqItem question="如何自定义自己的布局？">
+
+请仔细看说明书。通常我们建议：①先在白纸上画出来自己想要的布局；②使用组合键，进入想要自定义布局的编号；③设置每个按键的键值；④保存。
+
+</FaqItem>
+<FaqItem question="为什么点击Connect时，提示invalid ID？">
+
+请不要删除 Config.ini 文件，如果不小心删除了，请重新下载固件升级包，重新解压缩即可。
+
+</FaqItem>
+<FaqItem question="在Steam上，如何使用PlayStation支持？">
+
+如果游戏支持PlayStation手柄，请使用K28 Steam 的任意布局。
+
+</FaqItem>
+</FaqAccordion>
