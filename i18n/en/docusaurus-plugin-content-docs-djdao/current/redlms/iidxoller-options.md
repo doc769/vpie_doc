@@ -16,7 +16,7 @@ A variety of modes are pre-made, and different parameters can be set in differen
 ## 2. Download
 
 <div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
-  <a className="button button--primary" href="https://www.dj-dao.com/en/support/23.html">IIDXOLLER Options V3.2</a>
+  <a className="button button--primary" href="/download/redlms/IIDXOLLER_Options_V3.2_20250916.zip">IIDXOLLER Options V3.2</a>
 </div>
 
 :::tip

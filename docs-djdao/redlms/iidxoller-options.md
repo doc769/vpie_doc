@@ -15,7 +15,9 @@ DAOdesign 团队根据多年经验，制作的软件。
 
 ## 2. 下载
 
-[IIDXOLLER Options V3.2](https://www.dj-dao.com/cn/support/23.html)
+<div style={{marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+  <a className="button button--primary" href="/download/redlms/IIDXOLLER_Options_V3.2_20250916.zip">IIDXOLLER Options V3.2</a>
+</div>
 
 :::tip
 请完全解压后使用，不要在压缩包内直接运行。
